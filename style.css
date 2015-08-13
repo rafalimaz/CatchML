@@ -1,0 +1,131 @@
+#left {
+	float: left;
+	width: 180px;
+	margin: 0px;
+	height: 100%;
+	background-color: #DAFFDB;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+}
+
+#left h1{
+	font-size:16px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: green;
+	padding: 5px;
+}
+
+#left li {
+	list-style-image: url(bullet.gif);
+	font-size: 14px;
+	text-align: left;
+	border-right-width: 10px;
+	border-bottom-width: thin;
+	border-bottom-style: dotted;
+	border-bottom-color: #66AAEE;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	list-style-position: inside;
+
+}
+
+#left a:link  {
+	color: #000000;   
+	font-weight: normal;
+	text-decoration: none;
+	background: none;
+}
+
+#left a:visited {
+	color: #000000;   
+	font-weight: normal;
+	text-decoration: none;
+	background: none;
+}
+
+#left a:hover {
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	background: none;
+}
+
+#right {
+	float: right;
+	width: 260px;
+	margin: 0px;
+	height: 100%;
+	background-color: #DAFFDB;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	font-size: 14px;
+}
+
+#right h1{
+	font-size:16px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: green;
+	padding: 5px;
+}
+
+#right h2{
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+}
+#main {
+	width: auto;
+	margin: 0px;
+	margin-left: 182px;
+	margin-right: 262px;
+	padding: 15px;
+	
+}
+
+#main h1 {
+	text-align: justify;
+	font-size: 26px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+.submain {
+	padding: 10px;
+	margin: 0px;
+	text-align: justify;
+	background-color: #DAFFDB;
+}
+
+.submain h1 {
+	text-align: justify;
+	font-size: 26px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+.submain h2 {
+	text-align: justify;
+	background-color: #DAFFDB;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	margin: 0px;
+}

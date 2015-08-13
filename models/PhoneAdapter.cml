@@ -1,0 +1,27 @@
+system PhoneAdapter{
+	prop atHome, atOffice, receivedCall, isRingOn, isVibrateOn;
+	situation outDoor := !atHome && !atOffice;
+	situation callFinished := !receivedCall;
+	
+	sconstraint s1 := xor(atHome, atOffice, outDoor);
+	
+	tconstraint t1 := pre atHome post atOffice;
+	tconstraint t2 := pre atOffice post atHome;
+	
+	exception callException := receivedCall;	
+	 
+	scope callScope handle(callException){
+		case (atHome) {
+			do isRingOn && !isVibrateOn;
+			do callFinished;			
+		}
+		case (atOffice) {
+			do !isRingOn && isVibrateOn;
+			do callFinished;			
+		}
+		case (outDoor) {
+			do isRingOn && isVibrateOn;
+			do callFinished;			
+		}
+	}	
+}
