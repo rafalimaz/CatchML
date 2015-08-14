@@ -1,0 +1,30 @@
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-us">
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$("head").load("html/head.html"); 
+			$("#menu").load("html/menu.html");
+			$("#information").load("html/information.html"); 
+			$(".submain").load("html/home.html"); 
+			$("#footer").load("html/footer.html"); 
+			
+			$("#menu").on("click", "a", function(event) {
+				$(".submain").load($(this).attr("page"));
+			})
+		});
+	</script>
+	<head></head>
+	<body style="color: rgb(0, 0, 0);" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+		<h1>CatchML - Context Aware excepTion Handling Modeling Language</h1>
+		<p style="border-bottom: 4px double green; text-align: left;"></p>
+		<div id="menu" class="left"></div>
+		<div id="information" class="right"></div>
+		<div id="main">
+			<div class="submain"></div>
+		</div>
+		<br/>
+	</body>
+	<div id="footer"></div>
+	<!--<b>Visitors</b>: <?php include "total_visitas.php"; ?>-->
+</html>
