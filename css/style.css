@@ -1,5 +1,5 @@
 html {
-	background-color: ivory;
+	background-color: white;
 }
 .left {
 	float: left;
@@ -68,8 +68,7 @@ html {
 .right h1{
 	font-size:16px;
 	font-weight: bold;
-	text-align: center;
-	color: #FFFFFF;
+	text-align: center;	
 	padding: 5px;
 }
 
@@ -110,7 +109,6 @@ html {
 
 .submain h2 {
 	text-align: justify;
-	background-color: #DAFFDB;
 	font-size: 20px;
 	padding-top: 10px;
 	padding-right: 0px;

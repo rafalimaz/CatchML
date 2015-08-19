@@ -1,2 +1,2 @@
 # CatchML
-Context Aware Exception Modeling Language
+Context Aware Exception Handling Modeling Language
