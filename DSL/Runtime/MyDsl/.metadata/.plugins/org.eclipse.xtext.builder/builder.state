@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:builderState="http://www.eclipse.org/xtext/builderstate/1.0">
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/UbiParking.mydsl">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking" fragment="//@elements.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking11:atParkPlace" fragment="//@elements.0/@declarations.0/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:inMovement" fragment="//@elements.0/@declarations.0/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking14:atParkEntrance" fragment="//@elements.0/@declarations.0/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:atParkExit" fragment="//@elements.0/@declarations.0/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking8:hasSmoke" fragment="//@elements.0/@declarations.0/@tail.3">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking8:hasSpace" fragment="//@elements.0/@declarations.0/@tail.4">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:isSprinklerOn" fragment="//@elements.0/@declarations.0/@tail.5">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:isHot" fragment="//@elements.0/@declarations.0/@tail.6">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:outOfPark" fragment="//@elements.0/@declarations.1/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking1:a" fragment="//@elements.0/@declarations.2/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking1:b" fragment="//@elements.0/@declarations.3/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking18:allPlacesDisjoined" fragment="//@elements.0/@declarations.4/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SemanticConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t1" fragment="//@elements.0/@declarations.5/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t2" fragment="//@elements.0/@declarations.6/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t3" fragment="//@elements.0/@declarations.7/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:fireException" fragment="//@elements.0/@declarations.8/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:fireScope" fragment="//@elements.0/@declarations.9/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking16:noSpaceException" fragment="//@elements.0/@declarations.10/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking12:noSpaceScope" fragment="//@elements.0/@declarations.11/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:tautology1" fragment="//@elements.0/@declarations.12/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:tautology2" fragment="//@elements.0/@declarations.13/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:tautology3" fragment="//@elements.0/@declarations.14/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:fire1" fragment="//@elements.0/@declarations.15/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:fire2" fragment="//@elements.0/@declarations.16/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:fire3" fragment="//@elements.0/@declarations.17/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropertyDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/HealthCare.mydsl">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare" fragment="//@elements.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare7:BPMLT40" fragment="//@elements.0/@declarations.0/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare8:BPMGT120" fragment="//@elements.0/@declarations.0/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare22:SystolicBloodPressGT80" fragment="//@elements.0/@declarations.0/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare24:DiastolicBloodPressLT100" fragment="//@elements.0/@declarations.0/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:hasHeartAttack" fragment="//@elements.0/@declarations.0/@tail.3">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare17:regionNotNotified" fragment="//@elements.0/@declarations.0/@tail.4">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare17:notifyNearDevices" fragment="//@elements.0/@declarations.0/@tail.5">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare25:regionHandledSuccessfully" fragment="//@elements.0/@declarations.1/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare18:neighborhoodCalled" fragment="//@elements.0/@declarations.1/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare24:askUrgentHelpToEmergency" fragment="//@elements.0/@declarations.1/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare20:emergencyGroupCalled" fragment="//@elements.0/@declarations.1/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare12:doctorCalled" fragment="//@elements.0/@declarations.2/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:doctorIsActive" fragment="//@elements.0/@declarations.2/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare21:askUrgentHelpToDoctor" fragment="//@elements.0/@declarations.2/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare17:callReserveDoctor" fragment="//@elements.0/@declarations.2/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:hasHeartAttack" fragment="//@elements.0/@declarations.3/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare11:heartAttack" fragment="//@elements.0/@declarations.4/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare11:nearDevices" fragment="//@elements.0/@declarations.5/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare12:neighborhood" fragment="//@elements.0/@declarations.6/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare16:emergencySupport" fragment="//@elements.0/@declarations.7/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare6:device" fragment="//@elements.0/@declarations.8/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/VirtualLines.mydsl">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines" fragment="//@elements.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines9:hasDefect" fragment="//@elements.0/@declarations.0/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines19:timesNotAttendedGT2" fragment="//@elements.0/@declarations.0/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines17:removedFromQueues" fragment="//@elements.0/@declarations.0/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines13:updatedStatus" fragment="//@elements.0/@declarations.0/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines18:exceptionIsSeriuos" fragment="//@elements.0/@declarations.0/@tail.3">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines8:isOnline" fragment="//@elements.0/@declarations.1/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines15:removedAllQueue" fragment="//@elements.0/@declarations.1/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines14:hasReservation" fragment="//@elements.0/@declarations.1/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines16:manyReservations" fragment="//@elements.0/@declarations.1/@tail.2">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines17:cancelReservation" fragment="//@elements.0/@declarations.1/@tail.3">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines10:returnGT30" fragment="//@elements.0/@declarations.1/@tail.4">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines15:isAttractionOff" fragment="//@elements.0/@declarations.1/@tail.5">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines24:addUserInOtherAttraction" fragment="//@elements.0/@declarations.2/@head">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines18:notifyTimeToReturn" fragment="//@elements.0/@declarations.2/@tail.0">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines19:notifyChangesToUser" fragment="//@elements.0/@declarations.2/@tail.1">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines14:deviceNotFound" fragment="//@elements.0/@declarations.3/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines13:attractionOff" fragment="//@elements.0/@declarations.4/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:server" fragment="//@elements.0/@declarations.5/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:region" fragment="//@elements.0/@declarations.6/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines5:group" fragment="//@elements.0/@declarations.7/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:device" fragment="//@elements.0/@declarations.8/@value">
+      <eClass href="http://www.xtext.org/example/mydsl/MyDsl#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+</xmi:XMI>

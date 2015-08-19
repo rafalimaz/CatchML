@@ -1,0 +1,57 @@
+2013-02-14 11:53:28,296 INFO  - START - Make system model
+2013-02-14 11:53:28,296 INFO  - END - Make system model
+2013-02-14 11:53:28,296 INFO  - TOTAL - Make system model : 0.019473022 seconds
+2013-02-14 11:53:28,296 INFO  - START - Build normal ctl flow
+2013-02-14 11:53:28,764 INFO  - END - Build normal ctl flow
+2013-02-14 11:53:28,764 INFO  - TOTAL - Build normal ctl flow : 0.438263118 seconds
+2013-02-14 11:56:32,761 INFO  - START - Make system model
+2013-02-14 11:56:32,761 INFO  - END - Make system model
+2013-02-14 11:56:32,777 INFO  - TOTAL - Make system model: 0.016958501 seconds
+2013-02-14 11:56:32,777 INFO  - START - Build normal ctl flow
+2013-02-14 11:56:33,167 INFO  - END - Build normal ctl flow
+2013-02-14 11:56:33,167 INFO  - TOTAL - Build normal ctl flow: 0.400569826 seconds
+2013-02-14 11:56:33,167 INFO  - START - Make report
+2013-02-14 11:56:33,167 INFO  - END - Make report
+2013-02-14 11:56:33,167 INFO  - TOTAL - Make report: 0.003827186 seconds
+2013-02-14 11:56:33,182 INFO  - START - Make XML
+2013-02-14 11:56:33,182 INFO  - END - Make XML
+2013-02-14 11:56:33,182 INFO  - TOTAL - Make XML: 0.004530692 seconds
+2013-02-14 11:56:33,182 INFO  - START - Check properties
+2013-02-14 11:56:33,432 INFO  - END - Check properties
+2013-02-14 11:56:33,432 INFO  - TOTAL - Check properties: 0.251352858 seconds
+2013-02-14 12:01:39,027 INFO  - START - Run simple park
+2013-02-14 12:01:39,027 INFO  - START - Make system model
+2013-02-14 12:01:39,027 INFO  - END - Make system model
+2013-02-14 12:01:39,027 INFO  - TOTAL - Make system model: 0.001508466 seconds
+2013-02-14 12:01:39,027 INFO  - START - Build normal ctl flow
+2013-02-14 12:01:39,402 INFO  - END - Build normal ctl flow
+2013-02-14 12:01:39,402 INFO  - TOTAL - Build normal ctl flow: 0.376924475 seconds
+2013-02-14 12:01:39,402 INFO  - START - Make report
+2013-02-14 12:01:39,417 INFO  - END - Make report
+2013-02-14 12:01:39,417 INFO  - TOTAL - Make report: 0.003482575 seconds
+2013-02-14 12:01:39,417 INFO  - START - Make XML
+2013-02-14 12:01:39,417 INFO  - END - Make XML
+2013-02-14 12:01:39,417 INFO  - TOTAL - Make XML: 0.003771414 seconds
+2013-02-14 12:01:39,417 INFO  - START - Check properties
+2013-02-14 12:01:39,667 INFO  - END - Check properties
+2013-02-14 12:01:39,667 INFO  - TOTAL - Check properties: 0.244996811 seconds
+2013-02-14 12:01:39,667 INFO  - END - Run simple park
+2013-02-14 12:01:39,667 INFO  - TOTAL - Run simple park: 0.2460328 seconds
+2013-02-14 12:10:41,736 INFO  - START - Run simple park
+2013-02-14 12:10:41,736 INFO  - START - Make system model
+2013-02-14 12:10:41,736 INFO  - END - Make system model
+2013-02-14 12:10:41,736 INFO  - TOTAL - Make system model: 0.001813238 seconds
+2013-02-14 12:10:41,736 INFO  - START - Build normal ctl flow
+2013-02-14 12:10:42,126 INFO  - END - Build normal ctl flow
+2013-02-14 12:10:42,126 INFO  - TOTAL - Build normal ctl flow: 0.387107757 seconds
+2013-02-14 12:10:42,126 INFO  - START - Make report
+2013-02-14 12:10:42,126 INFO  - END - Make report
+2013-02-14 12:10:42,126 INFO  - TOTAL - Make report: 0.003274814 seconds
+2013-02-14 12:10:42,126 INFO  - START - Make XML
+2013-02-14 12:10:42,157 INFO  - END - Make XML
+2013-02-14 12:10:42,157 INFO  - TOTAL - Make XML: 0.010652893 seconds
+2013-02-14 12:10:42,157 INFO  - START - Check properties
+2013-02-14 12:10:42,423 INFO  - END - Check properties
+2013-02-14 12:10:42,423 INFO  - TOTAL - Check properties: 0.271216589 seconds
+2013-02-14 12:10:42,423 INFO  - END - Run simple park
+2013-02-14 12:10:42,423 INFO  - TOTAL - Run simple park: 0.696580278 seconds

@@ -1,0 +1,11 @@
+#A exceção Fire eventualmente é lançada
+EF isRaisedFire;
+
+#A exceção NoFreeSpace eventualmente é lançada
+EF isRaisedNoFreeSpace; 
+
+#Sempre que a exceção Fire é lançada o sistema a captura no próximo passo
+AG (EF isRaisedFire -> EX isCaughtFire);
+
+#Sempre que a exceção NoFreeSpace é lançada o sistema a captura no próximo passo
+AG (EF isRaisedFire -> EX isCaughtFire)

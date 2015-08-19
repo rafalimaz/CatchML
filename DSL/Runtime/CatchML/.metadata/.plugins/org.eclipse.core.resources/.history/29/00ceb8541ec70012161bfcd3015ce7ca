@@ -1,0 +1,16 @@
+system test {
+	prop p1, p2, p3;
+	
+	situation q := p1 || p2 || p3;
+	
+	exception e1 := p3;
+	
+	scope s1 handle (e1){
+		case(p1) catch {
+			do p2;
+		}
+		case (p2) catch {
+			do p1
+		}
+	}
+}

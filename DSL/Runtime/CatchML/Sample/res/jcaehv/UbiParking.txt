@@ -1,0 +1,41 @@
+			The JCAEHV Report 
+
++ System name: UbiParking
++ State number: 65
++ Initial state number: 1
++ Reachable state number: 17
++ Unreachable state number: 48
++ Exceptional state number: 8
++ Duration Time: 93ms
+
++ Reachable States
+ *CS6{hasSmoke, isHot}->CS6 
+ *CS7{hasSmoke, isHot, inMovement}->CS7 
+ CS9{isSprinklerOn, inMovement}->CS9 
+ CS11{isSprinklerOn, isHot, inMovement}->CS11 
+ CS13{isSprinklerOn, hasSmoke, inMovement}->CS13 
+ CS15{isSprinklerOn, hasSmoke, isHot, inMovement}->CS15 
+ *CS23{hasSmoke, isHot, inMovement, atParkPlace}->CS57 CS59 CS61 CS63 
+ *CS22{hasSmoke, isHot, atParkPlace}->CS22 
+ *CS38{hasSmoke, isHot, atParkEntrance}->CS38 
+ *CS39{hasSmoke, isHot, inMovement, atParkEntrance}->CS39 
+ *CS55{atParkExit, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 
+ *CS54{atParkExit, hasSmoke, isHot}->CS54 
+ CS59{atParkExit, isSprinklerOn, isHot, inMovement}->CS9 CS11 CS13 CS15 
+ CS57{atParkExit, isSprinklerOn, inMovement}->CS9 CS11 CS13 CS15 
+ CS63{atParkExit, isSprinklerOn, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 
+ CS61{atParkExit, isSprinklerOn, hasSmoke, inMovement}->CS9 CS11 CS13 CS15 
+ >CS64{}->CS6 CS7 CS22 CS23 CS38 CS39 CS54 CS55 
+
+ Properties Verification 
+
+[Accepted][fireException](Detection Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)))
+[Accepted][fireException](Catch Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & ((inMovement & atParkExit) | (inMovement & atParkPlace)))
+[Accepted][fireException](Handler Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit)) & EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace))
+[Accepted][fireException](Handling Stability)
+	Property Formula: AX(!((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit)) & EF((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))) &((isHot & hasSmoke) & ( ! isSprinklerOn))))) & AX(!((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace)) & EF((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))) &((isHot & hasSmoke) & ( ! isSprinklerOn)))))
+[Accepted][fireException](Reachability)
+	Property Formula: AX((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit)) -> EX((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))))) & AX((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace)) -> EX((isSprinklerOn & (inMovement & atParkExit)) & EX((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))))))

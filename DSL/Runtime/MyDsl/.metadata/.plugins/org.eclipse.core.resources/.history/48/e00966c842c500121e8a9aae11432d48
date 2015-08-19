@@ -1,0 +1,53 @@
+system UbiParking {	
+	prop  atParkPlace, inMovement, atParkEntrance, atParkExit, hasSmoke, hasSpace, isSprinklerOn, isHot;
+		
+	situation outOfPark := !atParkEntrance && !atParkPlace && !atParkExit;
+	situation a := atParkEntrance && atParkPlace;
+	situation b := (atParkEntrance) && nand(atParkExit,hasSmoke) && xor(atParkEntrance);	
+	
+	
+	sconstraint allPlacesDisjoined := xor(atParkEntrance,atParkPlace,atParkExit) || outOfPark;
+	
+	tconstraint t1 := pre outOfPark post !atParkPlace && !atParkExit;
+	tconstraint t2 := pre atParkEntrance post !atParkExit;
+	tconstraint t3 := pre atParkPlace post !atParkEntrance && !outOfPark;
+		
+	exception fireException := isHot && hasSmoke && !isSprinklerOn;	
+	scope fireScope handle (fireException){
+		case(inMovement && atParkPlace) catch {
+			do isSprinklerOn && (inMovement && atParkExit);
+			do isSprinklerOn && (inMovement && outOfPark);
+		}
+		case(inMovement && atParkExit) catch {
+			do isSprinklerOn && (inMovement && outOfPark);			
+		}
+	}
+	
+	exception noSpaceException := inMovement && atParkPlace && !hasSpace;	
+	scope noSpaceScope handle (noSpaceException){
+		case(inMovement && atParkPlace) catch {
+			do inMovement && atParkExit;			
+		}
+	}
+	
+	//spec efu :=  EF(atParkEntrance U atParkExit); //parsererror
+	//spec eau :=  AF(atParkEntrance U atParkExit); //parsererror
+	//spec eu := E(atParkExit U atParkEntrance); //rejectothers
+	//spec au := A(atParkExit U atParkEntrance); //rejectothers
+	//spec a := A(atParkExit); //rejectothers
+	//spec e := E(atParkExit); //rejectothers
+	spec efu := EG(atParkEntrance -> A(atParkEntrance U atParkExit));
+	spec efu2 := E(atParkExit U atParkEntrance); 
+	spec eau := A(atParkExit U atParkEntrance); 
+	
+	spec ex := EX(atParkEntrance);
+	spec ef := EF(atParkEntrance);
+	spec eg := EG(atParkEntrance);
+	spec ax := AF(atParkExit);
+	spec af := AF(atParkExit);
+	spec ag := EG(a -> A(a U atParkExit));
+		
+	spec f1 := EX(((isHot && hasSmoke) && ( ! isSprinklerOn)));
+	spec f2 := EX(((isHot && hasSmoke) && ( ! isSprinklerOn)) && ((inMovement && atParkExit) || (inMovement && atParkPlace)));
+	spec f3 := AX((((inMovement && atParkPlace) && (!hasSpace)) && (inMovement && atParkPlace)) -> EX ((inMovement && atParkExit)));
+}

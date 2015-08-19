@@ -1,0 +1,1025 @@
+<cks system="MyParkingTask" stateNumber="96" reachableStateNumber="36" unreachableStateNumber="60" exceptionalStateNumber="30" transitionNumber="308">
+	<state id="CS22" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS86" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS39" />
+			<post-state id="CS35" />
+			<post-state id="CS34" />
+			<post-state id="CS38" />
+		</post-states>
+	</state>
+	<state id="CS27" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS23" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS23" />
+		</post-states>
+	</state>
+	<state id="CS74" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS94" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS54" />
+			<post-state id="CS58" />
+			<post-state id="CS51" />
+			<post-state id="CS62" />
+			<post-state id="CS50" />
+			<post-state id="CS59" />
+			<post-state id="CS55" />
+			<post-state id="CS63" />
+		</post-states>
+	</state>
+	<state id="CS78" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS54" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS54" />
+		</post-states>
+	</state>
+	<state id="CS79" initial="true" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS79" />
+		</post-states>
+	</state>
+	<state id="CS38" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS82" />
+			<pre-state id="CS86" />
+			<pre-state id="CS83" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS22" />
+			<post-state id="CS31" />
+			<post-state id="CS23" />
+			<post-state id="CS27" />
+			<post-state id="CS19" />
+			<post-state id="CS30" />
+			<post-state id="CS18" />
+			<post-state id="CS26" />
+		</post-states>
+	</state>
+	<state id="CS70" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS51" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS51" />
+		</post-states>
+	</state>
+	<state id="CS91" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS54" />
+			<post-state id="CS58" />
+			<post-state id="CS51" />
+			<post-state id="CS62" />
+			<post-state id="CS50" />
+			<post-state id="CS59" />
+			<post-state id="CS55" />
+			<post-state id="CS63" />
+		</post-states>
+	</state>
+	<state id="CS26" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS82" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS39" />
+			<post-state id="CS35" />
+			<post-state id="CS34" />
+			<post-state id="CS38" />
+		</post-states>
+	</state>
+	<state id="CS83" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS39" />
+			<post-state id="CS35" />
+			<post-state id="CS34" />
+			<post-state id="CS38" />
+		</post-states>
+	</state>
+	<state id="CS62" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS62" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS62" />
+		</post-states>
+	</state>
+	<state id="CS90" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS54" />
+			<post-state id="CS58" />
+			<post-state id="CS51" />
+			<post-state id="CS62" />
+			<post-state id="CS50" />
+			<post-state id="CS59" />
+			<post-state id="CS55" />
+			<post-state id="CS63" />
+		</post-states>
+	</state>
+	<state id="CS30" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS35" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS82" />
+			<pre-state id="CS86" />
+			<pre-state id="CS83" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS22" />
+			<post-state id="CS31" />
+			<post-state id="CS23" />
+			<post-state id="CS27" />
+			<post-state id="CS19" />
+			<post-state id="CS30" />
+			<post-state id="CS18" />
+			<post-state id="CS26" />
+		</post-states>
+	</state>
+	<state id="CS59" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS59" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS59" />
+		</post-states>
+	</state>
+	<state id="CS63" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS63" />
+		</post-states>
+	</state>
+	<state id="CS87" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS0" />
+			<post-state id="CS12" />
+			<post-state id="CS13" />
+			<post-state id="CS4" />
+			<post-state id="CS9" />
+			<post-state id="CS1" />
+			<post-state id="CS8" />
+			<post-state id="CS5" />
+		</post-states>
+	</state>
+	<state id="CS31" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS31" />
+		</post-states>
+	</state>
+	<state id="CS71" initial="true" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+		</post-states>
+	</state>
+	<state id="CS39" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS82" />
+			<pre-state id="CS86" />
+			<pre-state id="CS83" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS0" />
+			<post-state id="CS12" />
+			<post-state id="CS13" />
+			<post-state id="CS4" />
+			<post-state id="CS9" />
+			<post-state id="CS1" />
+			<post-state id="CS8" />
+			<post-state id="CS5" />
+		</post-states>
+	</state>
+	<state id="CS19" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS67" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS34" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS82" />
+			<pre-state id="CS86" />
+			<pre-state id="CS83" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS22" />
+			<post-state id="CS31" />
+			<post-state id="CS23" />
+			<post-state id="CS27" />
+			<post-state id="CS19" />
+			<post-state id="CS30" />
+			<post-state id="CS18" />
+			<post-state id="CS26" />
+		</post-states>
+	</state>
+	<state id="CS18" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS35" />
+			<pre-state id="CS42" />
+			<pre-state id="CS34" />
+			<pre-state id="CS38" />
+			<pre-state id="CS43" />
+			<pre-state id="CS46" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS71" />
+			<post-state id="CS67" />
+			<post-state id="CS74" />
+			<post-state id="CS78" />
+			<post-state id="CS66" />
+			<post-state id="CS70" />
+			<post-state id="CS79" />
+			<post-state id="CS75" />
+		</post-states>
+	</state>
+	<state id="CS58" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS58" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS58" />
+		</post-states>
+	</state>
+	<state id="CS66" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS50" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS50" />
+		</post-states>
+	</state>
+	<state id="CS55" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS90" />
+			<pre-state id="CS94" />
+			<pre-state id="CS91" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS55" />
+		</post-states>
+	</state>
+	<state id="CS75" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS22" />
+			<pre-state id="CS27" />
+			<pre-state id="CS19" />
+			<pre-state id="CS30" />
+			<pre-state id="CS18" />
+			<pre-state id="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS87" />
+			<post-state id="CS82" />
+			<post-state id="CS86" />
+			<post-state id="CS83" />
+			<post-state id="CS90" />
+			<post-state id="CS94" />
+			<post-state id="CS91" />
+			<post-state id="CS95" />
+		</post-states>
+	</state>
+	<state id="CS95" initial="false" reachable="true" exceptional="true">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="isRaisedNoParkingSpace" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS67" />
+			<pre-state id="CS74" />
+			<pre-state id="CS78" />
+			<pre-state id="CS66" />
+			<pre-state id="CS70" />
+			<pre-state id="CS75" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS0" />
+			<post-state id="CS12" />
+			<post-state id="CS13" />
+			<post-state id="CS4" />
+			<post-state id="CS9" />
+			<post-state id="CS1" />
+			<post-state id="CS8" />
+			<post-state id="CS5" />
+		</post-states>
+	</state>
+</cks>

@@ -1,0 +1,1 @@
+SNACKS - A Tool for Specification of Normal and Abnormal Context-Aware Behavior as Kripke Structures

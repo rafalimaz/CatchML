@@ -1,0 +1,21 @@
+<scxml initial="new_node14" version="0.9" xmlns="http://www.w3.org/2005/07/scxml">
+ <state id="new_node14">
+  <transition target="new_node18"></transition>
+ </state>
+ <state id="new_node16">
+  <transition></transition>
+ </state>
+ <state id="new_node18">
+  <transition target="new_node16"></transition>
+  <transition target="new_node25"></transition>
+ </state>
+ <state id="new_node25">
+  <transition target="new_node28"></transition>
+  <state id="new_node31">
+   <transition target="new_node33"></transition>
+   <transition></transition>
+  </state>
+  <state id="new_node33"></state>
+ </state>
+ <final id="new_node28"></final>
+</scxml>

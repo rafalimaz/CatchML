@@ -1,0 +1,149 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Domainmodel:
+  (elements += AbstractElement)*
+;
+ 
+PackageDeclaration:
+  'package' name = QualifiedName '{'
+    (elements += AbstractElement)*
+  '}'
+;
+ 
+AbstractElement:
+  PackageDeclaration | Model | Import | PackageAmbientDeclaration
+;
+ 
+QualifiedName:
+  ID (=> '.' ID)*
+;
+ 
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard
+;
+  
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;
+
+Model:
+	'model' name = ID	 
+	'{'		
+		'propositions'
+			(propositions += Proposition)+
+		'end'
+		('constraints' 	
+			(constraints += Constraint)+
+		'end')?
+		'states' 	
+			(states += State)+
+			'initial:' init = [State]
+		'end'
+		'transitions' 	
+			(transitions += Transition)+
+		'end'
+	'}'
+;
+
+Proposition:
+	name = ID
+;
+
+Constraint:
+	name = ID ':' expression = LogicExpression
+;
+
+State:
+	name = ID ':' expression = LogicExpression
+;
+
+LogicExpression:
+	(prop=[Proposition | QualifiedName]
+	| opUn=UNARYOPERATOR '(' unary=LogicExpression ')' 
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')'	)
+	| opMul=MULTIPLEOPERATOR '(' multiple=MultipleExpression ')'		
+;
+
+MultipleExpression :
+   TerminalExpression ({Operation.left=current} 
+    op=',' right=MultipleExpression)?
+;
+ 
+TerminalExpression returns MultipleExpression:
+  	value=[Proposition | QualifiedName]
+;
+
+Transition:
+	init=[State] transitionExpression=TransitionExpression end=[State]
+;
+
+TransitionExpression:
+	'=>' {TransitionExpression} | '=[' expression=LogicExpression ']>'  
+;
+
+enum BINARYOPERATOR :
+	and | or | nand | nor | xor | ifthen | iff
+;
+
+enum UNARYOPERATOR:
+	not
+;
+
+enum MULTIPLEOPERATOR:
+	dsjn
+;
+
+PackageAmbientDeclaration:
+	'ambientpackage' name = QualifiedName '{'
+    	(elements += Ambient)*
+  	'}'	
+;
+
+Ambient:
+	'ambient' name = ID '{'		
+		'process' 
+			(process += Process)+
+		'end'
+		'behaviour'
+			behaviour = Behaviour
+		'end'		
+	'}'
+;
+
+Process:
+	name = ID ':' expression = LogicExpression
+;
+
+Behaviour returns Expression:
+	amb=[Ambient | QualifiedName] '[' composition = Composition ']'
+;
+
+Composition returns Expression:
+	Action ({Composition.left=current} '|' right=Action)*
+;
+
+Action returns Expression:
+	ProcessLiteral ({Action.left=current} '.' right=ProcessLiteral)* | Inactivity | Behaviour
+;
+
+ProcessLiteral:
+	value=[Process | QualifiedName]
+;
+
+Inactivity:
+	{Inactivity} '0'
+;
+
+enum UNARYPRIMITIVE:
+	 at | in | out | WITH='with' | switch_to | del
+;
+
+enum BINARYPRIMITIVE:
+	binary
+;
+
+enum MULTIPLEPRIMITIVE:
+	mul
+;

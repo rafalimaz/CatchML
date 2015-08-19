@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/br.ufc.great.catchml/src-gen" editDirectory="/br.ufc.great.catchml.edit/src"
+    editorDirectory="/br.ufc.great.catchml.editor/src" modelPluginID="br.ufc.great.catchml"
+    forceOverwrite="true" modelName="CatchML" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="br.ufc.great.catchml.edit"
+    editorPluginID="br.ufc.great.catchml.editor" runtimeVersion="2.8">
+  <genPackages prefix="CatchML" basePackage="br.ufc.great.catchml" disposableProviderFactory="true"
+      ecorePackage="CatchML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CatchML.ecore#//MULTIPLEOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//MULTIPLEOPERATOR/xor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CatchML.ecore#//BINARYOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//BINARYOPERATOR/nor"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//BINARYOPERATOR/nand"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CatchML.ecore#//TEMPORALOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/EX"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/EG"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/EF"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/AX"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/AG"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPORALOPERATOR/AF"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CatchML.ecore#//TEMPUNTILOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPUNTILOPERATOR/E"/>
+      <genEnumLiterals ecoreEnumLiteral="CatchML.ecore#//TEMPUNTILOPERATOR/A"/>
+    </genEnums>
+    <genClasses ecoreClass="CatchML.ecore#//Domainmodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//Domainmodel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//AbstractElement"/>
+    <genClasses ecoreClass="CatchML.ecore#//SystemDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//SystemDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//SystemDeclaration/declarations"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//Declaration"/>
+    <genClasses ecoreClass="CatchML.ecore#//PropositionExpressionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//PropositionExpressionDeclaration/args"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//PropositionDeclaration"/>
+    <genClasses ecoreClass="CatchML.ecore#//SituationDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//SituationDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//SemanticConstraintDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//SemanticConstraintDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//SemanticConstraintDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//TransitionConstraintDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//TransitionConstraintDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//TransitionConstraintDeclaration/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//TransitionConstraintDeclaration/right"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//ExceptionDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//ExceptionDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//ExceptionDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//AbstractDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//AbstractDeclaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//ScopeDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//ScopeDeclaration/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CatchML.ecore#//ScopeDeclaration/exception"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//ScopeDeclaration/handlers"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//HandlerDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//HandlerDeclaration/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//HandlerDeclaration/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//ActionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//ActionDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//PropertyDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//PropertyDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//PropertyDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//LogicExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/expr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//LogicExpression/opBin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//LogicExpression/opMul"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/args"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//LogicExpression/opTemp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/temporal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//LogicExpression/opTempUntil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/leftExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CatchML.ecore#//LogicExpression/rightExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CatchML.ecore#//LogicExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="CatchML.ecore#//OrOpExpression"/>
+    <genClasses ecoreClass="CatchML.ecore#//AndOpExpression"/>
+    <genClasses ecoreClass="CatchML.ecore#//RelationalOpExpression"/>
+    <genClasses ecoreClass="CatchML.ecore#//UnaryOpExpression"/>
+  </genPackages>
+</genmodel:GenModel>

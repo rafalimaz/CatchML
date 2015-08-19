@@ -1,0 +1,30 @@
+system test {
+	prop var1,var2,var4,var5;
+	prop var3;
+	
+	sit sit1 := and(var1,var2); 
+	sit sit2 := var2;
+	sit sit3 := or(sit1, sit2);
+	
+	sconst s1 := and(sit1, sit2);
+	tconst t1 := var1 x-> var2;
+	tconst t2 := var2 x-> var3;
+	
+	ex e1 := and(sit1,sit2);
+	ex e2 := and(var2, not(var2));
+	
+	scope a handle (e1){
+		case(and(var2, not(var2))) catch {
+			do var1;
+		}
+	}
+	
+	scope b handle (e2){
+		case(var1) catch{
+			do var2;
+			do var4;
+		}
+	}
+	
+	spec s1 := "EX((((var1 & var2) & (!var3)) & var4))";
+}

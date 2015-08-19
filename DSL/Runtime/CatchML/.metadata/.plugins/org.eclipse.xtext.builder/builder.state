@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:builderState="http://www.eclipse.org/xtext/builderstate/1.0">
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/UbiParking.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking11:atParkPlace" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:inMovement" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking14:atParkEntrance" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:atParkExit" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking8:hasSmoke" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:isSprinklerOn" fragment="//@elements.0/@declarations.0/@args.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:isHot" fragment="//@elements.0/@declarations.0/@args.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:outOfPark" fragment="//@elements.0/@declarations.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking18:allPlacesDisjoined" fragment="//@elements.0/@declarations.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SemanticConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t1" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t2" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t3" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:fireException" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:fireScope" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/HealthCare.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare7:BPMLT40" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare22:SystolicBloodPressGT80" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare24:DiastolicBloodPressLT100" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:hasHeartAttack" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:doctorIsActive" fragment="//@elements.0/@declarations.1/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare12:notifyDoctor" fragment="//@elements.0/@declarations.1/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare15:notifyEmergency" fragment="//@elements.0/@declarations.1/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare14:hasHeartAttack" fragment="//@elements.0/@declarations.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare9:isHealthy" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare20:heartAttackException" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HealthCare16:heartAttackScope" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/others/UbiParking2.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking11:atParkPlace" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:inMovement" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking14:atParkEntrance" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking10:atParkExit" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking8:hasSmoke" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking8:hasSpace" fragment="//@elements.0/@declarations.0/@args.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:isSprinklerOn" fragment="//@elements.0/@declarations.0/@args.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking5:isHot" fragment="//@elements.0/@declarations.0/@args.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:outOfPark" fragment="//@elements.0/@declarations.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking18:allPlacesDisjoined" fragment="//@elements.0/@declarations.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SemanticConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t1" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t2" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking2:t3" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking13:fireException" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking9:fireScope" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking16:noSpaceException" fragment="//@elements.0/@declarations.8">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:UbiParking12:noSpaceScope" fragment="//@elements.0/@declarations.9">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/others/VirtualLines.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines9:hasDefect" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines19:timesNotAttendedGT2" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines17:removedFromQueues" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines13:updatedStatus" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines18:exceptionIsSeriuos" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines8:isOnline" fragment="//@elements.0/@declarations.1/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines15:removedAllQueue" fragment="//@elements.0/@declarations.1/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines14:hasReservation" fragment="//@elements.0/@declarations.1/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines16:manyReservations" fragment="//@elements.0/@declarations.1/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines17:cancelReservation" fragment="//@elements.0/@declarations.1/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines10:returnGT30" fragment="//@elements.0/@declarations.1/@args.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines15:isAttractionOff" fragment="//@elements.0/@declarations.1/@args.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines24:addUserInOtherAttraction" fragment="//@elements.0/@declarations.2/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines18:notifyTimeToReturn" fragment="//@elements.0/@declarations.2/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines19:notifyChangesToUser" fragment="//@elements.0/@declarations.2/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines14:deviceNotFound" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines13:attractionOff" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:server" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:region" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines5:group" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:VirtualLines6:device" fragment="//@elements.0/@declarations.8">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/others/UbiParking1.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking1" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking111:atParkPlace" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking110:inMovement" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking114:atParkEntrance" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking110:atParkExit" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking18:hasSmoke" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking18:hasSpace" fragment="//@elements.0/@declarations.0/@args.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking113:isSprinklerOn" fragment="//@elements.0/@declarations.0/@args.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking15:isHot" fragment="//@elements.0/@declarations.0/@args.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking19:outOfPark" fragment="//@elements.0/@declarations.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking118:allPlacesDisjoined" fragment="//@elements.0/@declarations.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SemanticConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking12:t1" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking12:t2" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking12:t3" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking113:fireException" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking19:fireScope" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking116:noSpaceException" fragment="//@elements.0/@declarations.8">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:UbiParking112:noSpaceScope" fragment="//@elements.0/@declarations.9">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/others/HealthCareFull.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull7:BPMLT40" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull8:BPMGT120" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull22:SystolicBloodPressGT80" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull24:DiastolicBloodPressLT100" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull14:hasHeartAttack" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull17:regionNotNotified" fragment="//@elements.0/@declarations.0/@args.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull17:notifyNearDevices" fragment="//@elements.0/@declarations.0/@args.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull25:regionHandledSuccessfully" fragment="//@elements.0/@declarations.1/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull18:neighborhoodCalled" fragment="//@elements.0/@declarations.1/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull24:askUrgentHelpToEmergency" fragment="//@elements.0/@declarations.1/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull20:emergencyGroupCalled" fragment="//@elements.0/@declarations.1/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull12:doctorCalled" fragment="//@elements.0/@declarations.2/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull14:doctorIsActive" fragment="//@elements.0/@declarations.2/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull21:askUrgentHelpToDoctor" fragment="//@elements.0/@declarations.2/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull17:callReserveDoctor" fragment="//@elements.0/@declarations.2/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull14:hasHeartAttack" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull11:heartAttack" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull11:nearDevices" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull12:neighborhood" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull16:emergencySupport" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="14:HealthCareFull6:device" fragment="//@elements.0/@declarations.8">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Sample/src/PhoneAdapter.cml">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter" fragment="//@elements.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SystemDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter6:atHome" fragment="//@elements.0/@declarations.0/@args.0">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter8:atOffice" fragment="//@elements.0/@declarations.0/@args.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter12:receivedCall" fragment="//@elements.0/@declarations.0/@args.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter8:isRingOn" fragment="//@elements.0/@declarations.0/@args.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter11:isVibrateOn" fragment="//@elements.0/@declarations.0/@args.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//PropositionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter7:outDoor" fragment="//@elements.0/@declarations.1">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter12:callFinished" fragment="//@elements.0/@declarations.2">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SituationDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter2:s1" fragment="//@elements.0/@declarations.3">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//SemanticConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter2:t1" fragment="//@elements.0/@declarations.4">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter2:t2" fragment="//@elements.0/@declarations.5">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//TransitionConstraintDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter13:callException" fragment="//@elements.0/@declarations.6">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ExceptionDeclaration"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="12:PhoneAdapter9:callScope" fragment="//@elements.0/@declarations.7">
+      <eClass href="http://www.ufc.br/great/catchml/CatchML#//ScopeDeclaration"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+</xmi:XMI>

@@ -1,0 +1,11 @@
+<scxml initial="new_node14" version="0.9" xmlns="http://www.w3.org/2005/07/scxml"><!--   node-size-and-position x=0.0 y=0.0 w=385.0 h=263.0  -->
+ <state id="goo"><!--   node-size-and-position x=290.0 y=43.0 w=75.0 h=75.0  -->
+  <onentry>
+   <log expr="&#039;hello world&#039;"></log>
+  </onentry>
+  <transition target="new_node14"></transition>
+ </state>
+ <state id="new_node14"><!--   node-size-and-position x=290.0 y=168.0 w=75.0 h=75.0  --></state>
+ <state id="new_node19"><!--   node-size-and-position x=155.0 y=43.0 w=75.0 h=75.0  --></state>
+ <state id="new_node22"><!--   node-size-and-position x=20.0 y=43.0 w=75.0 h=75.0  --></state>
+</scxml>

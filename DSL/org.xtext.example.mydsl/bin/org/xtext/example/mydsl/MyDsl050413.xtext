@@ -1,0 +1,190 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Domainmodel:
+  (elements += AbstractElement)*
+;
+ 
+PackageDeclaration:
+  'package' name = QualifiedName '{'
+    (elements += AbstractElement)*
+  '}'
+;
+
+AbstractElement:
+  Model 
+;
+
+QualifiedName:
+  ID (=> '.' ID)*
+;
+
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard
+;
+
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;
+
+Model:
+	'system' name = ID	 
+	'{'		
+		contextModel = ContextModel
+		handlingModel = HandlingModel
+		specificationModel = SpecificationModel
+	'}'
+;
+
+ContextModel:
+	{ContextModel}(label = 'context model' ' {'
+		propositionsList = PropositionsList
+		expressionsList = ExpressionsList
+		semanticConstraintsList = SemanticConstraintsList
+		transitionConstraintsList = TransitionConstraintsList
+	'}')?
+;
+
+HandlingModel:
+	{HandlingModel} (label = 'handling model' ' {'
+		exceptionsList = ExceptionsList
+		casesList = CasesList
+		scopesList = ScopesList
+	'}')?
+;
+
+SpecificationModel:
+	{SpecificationModel} (label = 'specification model' ' {'
+		properties += Property
+	'}')?
+;
+
+PropositionsList:
+	{PropositionsList}(label = 'propositions' ' {'
+		(propositions += Proposition)+
+	'}')?
+;
+
+Proposition:
+	name = ID
+;
+
+CasesList:
+	{CasesList}(label = 'cases' ' { ' 	
+		(cases += Case)+
+	'}')?
+;
+
+Case:
+	name = ID ' {'
+		conditionExpression = ConditionExpression
+		actionsExpression = ActionsExpression
+	'}'
+;
+
+ConditionExpression:
+	label = 'condition' ': ' condition = Condition
+;
+
+Condition:
+	name = ID ': ' expression = LogicExpression
+;
+
+ActionsExpression:
+	label = 'actions' ': ' actions = Actions 
+;
+
+Actions:
+	name = ID ': ' actionsList = ActionsList
+;
+
+ActionsList:	
+	(action = LogicExpression
+	| '{ ' multiple=MultipleActionsExpression ' }')
+;
+
+MultipleActionsExpression:
+	TerminalAction ({Operation.left=current} 
+    op=', ' right=MultipleActionsExpression)?
+;
+
+TerminalAction returns MultipleActionsExpression:
+	action = LogicExpression
+;
+
+ExpressionsList: 
+	{Expressions}(label = 'expressions' ' {' 	
+		(expressions += Expression)+
+	'}')?
+;
+
+Expression:
+	name = ID ': ' expression = LogicExpression
+;
+
+SemanticConstraintsList:
+	{SemanticConstraintsList}(label = 'semantic constraints' ' {' 	
+		(constraints += Expression)+
+	'}')?
+;
+
+TransitionConstraintsList:
+	{TransitionConstraintsList}(label = 'transition constraints' ' {' 	
+		(constraints += Expression)+
+	'}')?
+;
+
+ExceptionsList: 
+	{ExceptionsList}(label = 'exceptions' ' {' 	
+		(exceptions += Exception)+
+	'}')?
+;
+
+Exception:
+	name = ID ': ' expression = LogicExpression
+;
+
+ScopesList: 
+	{ScopesList}(label = 'scopes' ' {' 	
+		(scopes += Scope)+
+	'}')?
+;
+
+Scope:
+	'when' name = [Exception | QualifiedName] 
+	('and' and+= [Condition | QualifiedName]
+	'then' then+= [Actions | QualifiedName])+
+;
+
+Property:
+	name = ID ': ' expression = LogicExpression
+;
+
+LogicExpression:
+	(prop=[Proposition | QualifiedName]
+	| opUn=UNARYOPERATOR '(' unary=LogicExpression ')' 
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')'	)
+	| opMul=MULTIPLEOPERATOR '(' multiple=MultipleExpression ')'
+;
+
+MultipleExpression :
+   TerminalExpression ({Operation.left=current} 
+    op=',' right=MultipleExpression)?
+;
+ 
+TerminalExpression returns MultipleExpression:
+  	value=[Proposition | QualifiedName]
+;
+
+enum BINARYOPERATOR :
+	and | or | nand | nor | xor | ifthen | iff
+;
+
+enum UNARYOPERATOR:
+	not
+;
+
+enum MULTIPLEOPERATOR:
+	dsjn
+;

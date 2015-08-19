@@ -1,0 +1,84 @@
+system UbiParking_Wrong {
+	
+prop inMovement, atParkPlace, atParkEntrance, atParkExit, hasSpace, isHot, hasSmoke, isSprinklerOn;
+
+exp atPark := and(inMovement,atParkPlace);
+
+tconst x := <exp> x-> <exp> ;
+
+sconst x := <exp>;
+
+ex e := <exp>;
+
+
+scope <name> handle(e) {
+
+  case <exp> catch {
+    do <exp>;
+    do <exp>;
+  }
+
+  case <exp> catch {
+    do <exp>;
+    do <exp>;
+  }
+
+  case <exp> catch {
+    do <exp>;
+    do <exp>;
+  }
+}
+
+
+}
+spec p : 		}
+		expressions {
+			outOfPark:and(not(atParkEntrance),not(atParkPlace),not(atParkExit))
+		}
+		semantic constraints {
+			allPlacesDisjoined: or(xor(atParkEntrance, atParkPlace, atParkExit),outOfPark)
+		}
+		transition constraints {
+			t1: outOfPark <x> and(not(atParkPlace), not(atParkExit))
+			t2: atParkEntrance <x> not(atParkExit)
+			t3: atParkPlace <x> and(not(atParkEntrance), not(outOfPark))
+		}
+	}
+	
+	handling model {
+		exceptions {			 
+			fireException: and(isHot, hasSmoke, not(isSprinklerOn), not(isHot))
+			noSpaceException:and(inMovement, atParkPlace, not(hasSpace))
+		}
+		
+		scope fireHandling catches fireException{
+			handler runningAtParkPlace {
+				when(and(inMovement,atParkPlace)) 
+				do {
+					and(isSprinklerOn, and(inMovement, atParkExit))
+					and(isSprinklerOn, and(inMovement, outOfPark))	
+				} 
+			}
+			handler runningAtParkExit {	
+				when(and(inMovement,atParkExit))
+				do{
+					and (isSprinklerOn, and(inMovement, outOfPark))	
+				}
+			}
+		}
+		
+		scope noSpaceHandling catches noSpaceException {
+			context inMovement
+			handler noSpaceAtParkPlace {
+				when(and(inMovement,atParkPlace)) 
+				do {
+					and(inMovement, atParkExit)
+				} 
+			}
+		}
+	}
+	
+	specification model {
+		p1: outOfPark
+	}
+}

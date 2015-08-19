@@ -1,0 +1,28 @@
+strict digraph SimpleParking {
+overlap = false;
+splines = true; 
+layout = fdp; 
+subgraph cluster_0 {
+color = blue; 
+labeljust = "l";
+label = "The SNACKS Report\n+ System name: SimpleParking\n+ State number: 12\n+ Initial state number: 1\n+ Reachable state number: 8\n+ Unreachable state number: 4\n+ Exceptional state number: 0\n+ Transition number: 14";
+"CS9"->"CS11"->"CS7"->"CS1";
+"CS7"->"CS6";
+"CS6"->"CS0"->"CS1";
+"CS1"->"CS5"->"CS3"->"CS9";
+subgraph cluster_1 {
+node [style=filled];
+color = blue;
+labeljust = "l";
+label = "Initial States";
+"CS9" [label = "\N\nparkGoal\ninMovement", color=lightblue, style=filled] 
+}
+"CS11" [label = "\N\nparkGoal\ninMovement\natShopping"];
+"CS6" [label = "\N\nparkGoal\natPark\natShopping"];
+"CS1" [label = "\N\ninMovement\nexitGoal\natPark\natShopping"];
+"CS0" [label = "\N\nexitGoal\natPark\natShopping"];
+"CS7" [label = "\N\nparkGoal\ninMovement\natPark\natShopping"];
+"CS5" [label = "\N\ninMovement\nexitGoal\natShopping"];
+"CS3" [label = "\N\ninMovement\nexitGoal"];
+}
+}

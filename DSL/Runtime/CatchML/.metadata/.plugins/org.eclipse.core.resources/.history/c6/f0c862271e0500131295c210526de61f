@@ -1,0 +1,20 @@
+system HealthCare {
+	prop BPMLT40, SystolicBloodPressGT80, DiastolicBloodPressLT100, hasHeartAttack, wasHelped;
+	prop doctorIsActive, notifyDoctor, notifyEmergency;	
+	
+	situation hasHeartAttack := BPMLT40 && SystolicBloodPressGT80 && DiastolicBloodPressLT100;
+	situation isHealthy := !hasHeartAttack; 
+	
+	exception heartAttackException := hasHeartAttack;
+
+	scope heartAttackScope handle (heartAttackException) {
+		case (doctorIsActive && !wasHelped) {
+			do notifyDoctor;
+			do isHealthy;
+		}
+		case (!doctorIsActive && !wasHelped) {
+			do notifyEmergency;
+			do isHealthy;
+		}
+	}	
+}

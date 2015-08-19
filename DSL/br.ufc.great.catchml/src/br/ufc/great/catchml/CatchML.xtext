@@ -1,0 +1,191 @@
+grammar br.ufc.great.catchml.CatchML with org.eclipse.xtext.common.Terminals
+
+generate catchML "http://www.ufc.br/great/catchml/CatchML"
+
+Domainmodel:
+  (elements += AbstractElement)*
+;
+
+/*PackageDeclaration:
+  'package' name = QualifiedName '{'
+    (elements += AbstractElement)*
+  '}'
+;*/
+
+AbstractElement:
+    /*Import |*/ SystemDeclaration
+;
+
+QualifiedName:
+  ID (=> '.' ID)*
+;
+
+/*
+Import:
+  'use' importedNamespace = QualifiedNameWithWildcard ';'
+; */
+
+/*
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;*/
+
+// BEGIN - MODEL
+SystemDeclaration:
+	'system' name = ID '{'
+		(declarations += Declaration)*
+	'}'
+;
+
+Declaration:
+	PropositionExpressionDeclaration | SituationDeclaration| SemanticConstraintDeclaration |
+	TransitionConstraintDeclaration | ExceptionDeclaration | ScopeDeclaration |
+	PropertyDeclaration
+;
+
+// END - MODEL
+
+PropositionExpressionDeclaration:
+	'prop' args+=PropositionDeclaration (',' args+=PropositionDeclaration)* ';'
+;
+
+PropositionDeclaration:
+	name = ID
+;
+
+SituationDeclaration:
+	 'situation' name = ID ':=' expression = LogicExpression ';'
+;
+
+SemanticConstraintDeclaration:
+	'sconstraint' name = ID ':=' expression = LogicExpression ';'
+;
+
+TransitionConstraintDeclaration:
+	'tconstraint' name = ID ':=' 'pre' left = LogicExpression 'post' right = LogicExpression ';'
+;
+
+ExceptionDeclaration:
+	'exception' name = ID ':=' expression = LogicExpression ';'
+;
+
+AbstractDeclaration:
+	PropositionDeclaration | SituationDeclaration
+;
+
+// BEGIN - HANDLERS
+
+ScopeDeclaration:
+	'scope' name = ID 'handle' '(' exception = [ExceptionDeclaration] ')' '{'
+		(handlers += HandlerDeclaration)+
+	'}' 
+;
+
+HandlerDeclaration:
+	'case' '(' expression = LogicExpression ')' '{'
+		(actions+=ActionDeclaration)+
+	'}' //(propagation=PropagationDeclaration)?
+;
+
+ActionDeclaration:
+	'do' expression = LogicExpression ';'
+;
+
+/*PropagationDeclaration:
+	SignalDeclaration | RaiseDeclaration
+;
+
+SignalDeclaration:
+	'signal' '(' exception = [ExceptionDeclaration] ')' 'to' scope=[ScopeDeclaration] ';'
+;
+
+RaiseDeclaration:
+	'raise' '(' exception = [ExceptionDeclaration] ')'';'
+;*/
+//END - HANDLERS
+
+PropertyDeclaration:
+	'spec' name = ID ':=' expression = TemporalLogicExpression ';'
+;
+
+//BEGIN - LOGIC EXPRESSIONS
+
+LogicExpression returns LogicExpression:
+	OrExpression
+;
+
+OrExpression returns LogicExpression:
+	AndExpression ({OrOpExpression.left=current} 
+	op='||' right=AndExpression)*
+;
+
+AndExpression returns LogicExpression:
+	RelationalExpression ({AndOpExpression.left=current} 
+	op='&&' right=RelationalExpression)*
+;
+
+RelationalExpression returns LogicExpression:
+	AdditiveExpression ({RelationalOpExpression.left=current} 
+	op=('->' | '<->') right=AdditiveExpression)*
+;
+
+AdditiveExpression returns LogicExpression:
+	{UnaryOpExpression} op=('!') expr=PrimaryExpression
+	| PrimaryExpression
+;
+
+PrimaryExpression returns LogicExpression:
+	'(' expr=LogicExpression ')' 
+	| value = [AbstractDeclaration] 
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')'
+	| opMul=MULTIPLEOPERATOR '(' args+=LogicExpression (',' args+=LogicExpression)+ ')'	
+;
+
+// BEGIN - TEMPORAL LOGIC EXPRESSIONS
+
+TemporalLogicExpression returns LogicExpression:
+	TemporalOrExpression
+;
+
+TemporalOrExpression returns LogicExpression:
+	TemporalAndExpression ({OrOpExpression.left=current} op='||' right=TemporalAndExpression)*
+;
+
+TemporalAndExpression returns LogicExpression:
+	TemporalRelationalExpression ({AndOpExpression.left=current} op='&&' right=TemporalRelationalExpression)*
+;
+
+TemporalRelationalExpression returns LogicExpression:
+	TemporalAdditiveExpression ({RelationalOpExpression.left=current} 
+	op=('->' | '<->') right=TemporalAdditiveExpression)*
+;
+
+TemporalAdditiveExpression returns LogicExpression:
+	{UnaryOpExpression} op=('!') expr=TemporalPrimaryExpression | TemporalPrimaryExpression
+;
+
+TemporalPrimaryExpression returns LogicExpression:
+	'(' expr=TemporalLogicExpression ')' | value = [AbstractDeclaration]
+	| opTemp=TEMPORALOPERATOR '(' temporal=TemporalLogicExpression ')'
+	| opTempUntil=TEMPUNTILOPERATOR '(' leftExp=TemporalLogicExpression 'U' rightExp=TemporalLogicExpression ')'	
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')' 
+	| opMul=MULTIPLEOPERATOR '(' args+=LogicExpression (',' args+=LogicExpression)+ ')'	
+;
+
+// BEGIN - Enums
+
+enum MULTIPLEOPERATOR:
+	xor
+;
+
+enum BINARYOPERATOR:
+	nor | nand
+;
+
+enum TEMPORALOPERATOR:
+	EX | EG | EF | AX | AG | AF
+;
+
+enum TEMPUNTILOPERATOR:
+	E | A
+;

@@ -1,0 +1,32 @@
+system UbiParking {
+	prop atParkPlace, inMovement, atParkEntrance, atParkExit, hasSmoke, hasSpace, isSprinklerOn, isHot;
+
+	situation outOfPark := !atParkEntrance && !atParkPlace && !atParkExit;
+
+	sconstraint allPlacesDisjoined := xor(atParkEntrance, atParkPlace, atParkExit) || outOfPark;
+
+	tconstraint t1 := pre outOfPark post !atParkPlace && !atParkExit;
+	tconstraint t2 := pre atParkEntrance post !atParkExit;
+	tconstraint t3 := pre atParkPlace post !atParkEntrance && !outOfPark;
+
+	exception fireException := isHot && hasSmoke && !isSprinklerOn && !isHot;
+
+	scope fireScope handle (fireException) {
+		case (inMovement && atParkPlace) {
+			do isSprinklerOn && (inMovement && atParkExit);
+			do isSprinklerOn && (inMovement && outOfPark);
+		}
+		case (inMovement && atParkExit) {
+			do isSprinklerOn && (inMovement && outOfPark);
+		}
+	}
+
+	exception noSpaceException := inMovement && atParkPlace && !hasSpace;
+	scope noSpaceScope handle (noSpaceException) {
+		case (inMovement && atParkPlace) {
+			do inMovement && atParkExit;
+		}
+	}
+
+	spec hasFireException := EX (((isHot && hasSmoke) && (!isSprinklerOn)));
+}

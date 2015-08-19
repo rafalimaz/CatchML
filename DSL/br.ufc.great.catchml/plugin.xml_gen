@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.ufc.br/great/catchml/CatchML" 
+       class = "br.ufc.great.catchml.catchML.CatchMLPackage"
+       genModel = "br/ufc/great/catchml/CatchML.genmodel" /> 
+	
+  </extension>
+
+
+
+
+</plugin>

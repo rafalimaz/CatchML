@@ -1,0 +1,17 @@
+			The SNACKS Report
+
++ System name: MyTest
++ State number: 6
++ Initial state number: 1
++ Reachable state number: 6
++ Unreachable state number: 0
++ Exceptional state number: 0
++ Transition number: 6
+
++ Reachable States
+ CS0{esvaziarGoal, baixo}->CS1 
+ CS3{encherGoal, alto}->CS2 
+ CS5{encherGoal, medio}->CS3 
+ CS4{esvaziarGoal, medio}->CS0 
+ CS2{esvaziarGoal, alto}->CS4 
+ >CS1{encherGoal, baixo}->CS5 

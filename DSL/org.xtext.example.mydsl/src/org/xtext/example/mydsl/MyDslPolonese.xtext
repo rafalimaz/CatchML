@@ -1,0 +1,165 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Domainmodel:
+  (elements += AbstractElement)*
+;
+
+/*PackageDeclaration:
+  'package' name = QualifiedName '{'
+    (elements += AbstractElement)*
+  '}'
+;*/
+
+AbstractElement:
+    Import | SystemDeclaration
+;
+
+QualifiedName:
+  ID (=> '.' ID)*
+;
+
+Import:
+  'use' importedNamespace = QualifiedNameWithWildcard ';'
+;
+
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;
+
+// BEGIN - MODEL
+SystemDeclaration:
+	'system' name = ID '{'
+		(declarations += Declaration)*
+	'}'
+;
+
+Declaration:
+	PropositionType | SituationType| SemanticConstraintType |
+	TransitionConstraintType | ExceptionType | ScopeType |
+	PropertyType
+;
+
+PropositionType:
+	PropositionList | PropositionSingle
+;
+
+// END - MODEL
+
+PropositionList:
+	label='prop' head=PropositionDeclaration(',' tail+=PropositionDeclaration)+ ';'
+;
+
+PropositionSingle:
+	label='prop' value=PropositionDeclaration ';'
+;
+
+PropositionDeclaration:
+	name = ID
+;
+
+SituationType:
+	label='situation' value=SituationDeclaration ';' 
+;
+
+SituationDeclaration:
+	 name = ID ':=' expression = LogicExpression
+;
+
+SemanticConstraintType:
+	label='sconstraint' value=SemanticConstraintDeclaration ';' 
+;
+
+SemanticConstraintDeclaration:
+	name = ID ':=' expression = LogicExpression
+;
+
+TransitionConstraintType:
+	label='tconstraint' value=TransitionConstraintDeclaration ';' 
+;
+
+TransitionConstraintDeclaration:
+	name = ID ':=' 'pre' left = LogicExpression 'post' right = LogicExpression
+;
+
+ExceptionType:
+	label='exception' value=ExceptionDeclaration ';' 
+;
+
+ExceptionDeclaration:
+	name = ID ':=' expression = LogicExpression
+;
+
+AbstractDeclaration:
+	PropositionDeclaration | SituationDeclaration
+;
+
+// BEGIN - HANDLERS
+
+ScopeType:
+	label='scope' value=ScopeDeclaration
+;
+ScopeDeclaration:
+	name = ID 'handle' '(' exception = [ExceptionDeclaration] ')' '{'
+		(handlers += HandlerDeclaration)+
+	'}' 
+;
+
+HandlerDeclaration:
+	'case' '(' expression = LogicExpression ')' 'catch' '{'
+		(actions+=ActionDeclaration)+
+	'}' (propagation=PropagationDeclaration)?
+;
+
+ActionDeclaration:
+	'do' expression = LogicExpression ';'
+;
+
+PropagationDeclaration:
+	SignalDeclaration | RaiseDeclaration
+;
+
+SignalDeclaration:
+	'signal' '(' exception = [ExceptionDeclaration] ')' 'to' scope=[ScopeDeclaration] ';'
+;
+
+RaiseDeclaration:
+	'raise' '(' exception = [ExceptionDeclaration] ')'';'
+;
+//END - HANDLERS
+
+PropertyType:
+	label='spec' value=PropertyDeclaration ';' 
+;
+PropertyDeclaration:
+	name = ID ':=' expression = STRING
+;
+
+LogicExpression:
+	(atom=[AbstractDeclaration]
+	| opUn=UNARYOPERATOR '(' unary=LogicExpression ')' 
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')'	)
+	| opMul=MULTIPLEOPERATOR '(' multiple=MultipleExpression ')'
+;
+
+MultipleExpression returns LogicExpression:
+   TerminalExpression ({Operation.left=current} 
+    op=',' right=MultipleExpression)?
+;
+ 
+TerminalExpression returns MultipleExpression:
+  	value=LogicExpression
+;
+
+enum BINARYOPERATOR:
+	ifthen | iff
+;
+
+enum UNARYOPERATOR:
+	not
+;
+
+enum MULTIPLEOPERATOR:
+	and | or | xor | nand | nor
+;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="br.ufc.great.catchml.sdk"
+      label="CatchML SDK Feature "
+      version="1.0.1">
+
+   <plugin
+         id="br.ufc.great.catchml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="br.ufc.great.catchml.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

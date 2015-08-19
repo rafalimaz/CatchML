@@ -1,0 +1,42 @@
+system VirtualLines {
+	prop hasDefect, timesNotAttendedGT2, removedFromQueues, updatedStatus, exceptionIsSeriuos;
+	prop isOnline, removedAllQueue, hasReservation, manyReservations, cancelReservation, returnGT30, isAttractionOff;
+	prop addUserInOtherAttraction, notifyTimeToReturn, notifyChangesToUser;
+
+	exception deviceNotFound := !isOnline;
+	exception attractionOff := isAttractionOff;
+
+	scope server handle (deviceNotFound) {
+		case (!hasDefect && timesNotAttendedGT2) {
+			do removedFromQueues;
+		}
+		case (hasDefect) {
+			do updatedStatus;
+		}
+	}
+
+	scope region handle (attractionOff) {
+		case (exceptionIsSeriuos) {
+			do removedAllQueue;
+		}
+	}
+
+	scope group handle (attractionOff) {
+		case (returnGT30) {
+			do removedAllQueue;
+		}
+	}
+
+	scope device handle (attractionOff) {
+		case (!hasReservation) {
+			do notifyTimeToReturn;
+		}
+		case (hasReservation && manyReservations) {
+			do cancelReservation;
+		}
+		case (hasReservation && !manyReservations) {
+			do addUserInOtherAttraction;
+			do notifyChangesToUser;
+		}
+	}
+}

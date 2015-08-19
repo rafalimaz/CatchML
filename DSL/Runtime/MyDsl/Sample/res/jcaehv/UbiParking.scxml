@@ -1,0 +1,279 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initialstate="CS128">
+<state id="*CS35" >
+	<onentry>
+		<log expr="{isHot, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS33" >
+	<onentry>
+		<log expr="{inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS39" >
+	<onentry>
+		<log expr="{hasSmoke, isHot, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS37" >
+	<onentry>
+		<log expr="{hasSmoke, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS43" >
+	<onentry>
+		<log expr="{isSprinklerOn, isHot, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS41" >
+	<onentry>
+		<log expr="{isSprinklerOn, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS47" >
+	<onentry>
+		<log expr="{isSprinklerOn, hasSmoke, isHot, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="*CS45" >
+	<onentry>
+		<log expr="{isSprinklerOn, hasSmoke, inMovement, atParkPlace}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+	<transition target="CS99"></transition>
+	<transition target="CS101"></transition>
+	<transition target="CS103"></transition>
+	<transition target="CS105"></transition>
+	<transition target="CS107"></transition>
+	<transition target="CS109"></transition>
+	<transition target="CS111"></transition>
+	<transition target="CS113"></transition>
+	<transition target="CS115"></transition>
+	<transition target="CS117"></transition>
+	<transition target="CS119"></transition>
+	<transition target="CS121"></transition>
+	<transition target="CS123"></transition>
+	<transition target="CS125"></transition>
+	<transition target="CS127"></transition>
+</state>
+<state id="CS103" >
+	<onentry>
+		<log expr="{atParkExit, hasSmoke, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS103"></transition>
+</state>
+<state id="CS101" >
+	<onentry>
+		<log expr="{atParkExit, hasSmoke, inMovement}"/>
+	</onentry>
+	<transition target="CS101"></transition>
+</state>
+<state id="CS99" >
+	<onentry>
+		<log expr="{atParkExit, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS99"></transition>
+</state>
+<state id="CS97" >
+	<onentry>
+		<log expr="{atParkExit, inMovement}"/>
+	</onentry>
+	<transition target="CS97"></transition>
+</state>
+<state id="CS111" >
+	<onentry>
+		<log expr="{atParkExit, isSprinklerOn, hasSmoke, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS111"></transition>
+</state>
+<state id="CS109" >
+	<onentry>
+		<log expr="{atParkExit, isSprinklerOn, hasSmoke, inMovement}"/>
+	</onentry>
+	<transition target="CS109"></transition>
+</state>
+<state id="CS107" >
+	<onentry>
+		<log expr="{atParkExit, isSprinklerOn, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS107"></transition>
+</state>
+<state id="CS105" >
+	<onentry>
+		<log expr="{atParkExit, isSprinklerOn, inMovement}"/>
+	</onentry>
+	<transition target="CS105"></transition>
+</state>
+<state id="CS119" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, hasSmoke, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS119"></transition>
+</state>
+<state id="CS117" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, hasSmoke, inMovement}"/>
+	</onentry>
+	<transition target="CS117"></transition>
+</state>
+<state id="CS115" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS115"></transition>
+</state>
+<state id="CS113" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, inMovement}"/>
+	</onentry>
+	<transition target="CS113"></transition>
+</state>
+<state id="CS127" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, isSprinklerOn, hasSmoke, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS127"></transition>
+</state>
+<state id="CS125" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, isSprinklerOn, hasSmoke, inMovement}"/>
+	</onentry>
+	<transition target="CS125"></transition>
+</state>
+<state id="CS123" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, isSprinklerOn, isHot, inMovement}"/>
+	</onentry>
+	<transition target="CS123"></transition>
+</state>
+<state id="CS121" >
+	<onentry>
+		<log expr="{hasSpace, atParkExit, isSprinklerOn, inMovement}"/>
+	</onentry>
+	<transition target="CS121"></transition>
+</state>
+<state id="CS128" initial="true">
+	<onentry>
+		<log expr="{}"/>
+	</onentry>
+	<transition target="*CS33"></transition>
+	<transition target="*CS35"></transition>
+	<transition target="*CS37"></transition>
+	<transition target="*CS39"></transition>
+	<transition target="*CS41"></transition>
+	<transition target="*CS43"></transition>
+	<transition target="*CS45"></transition>
+	<transition target="*CS47"></transition>
+</state>
+</scxml>

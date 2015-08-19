@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appenders>
+    <File name="Test" fileName="Test.log" append="true">
+      <!--  <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/> -->
+      <PatternLayout pattern="%d %-5p - %m%n"/> 
+    </File>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d %-5p - %m%n"/> 
+    </Console>
+  </appenders>
+  <loggers>
+    <logger name="org.apache.log4j.xml" level="debug">
+      <appender-ref ref="Test"/>
+    </logger>
+    <root level="debug">
+      <appender-ref ref="STDOUT"/>
+    </root>
+  </loggers>
+</configuration>

@@ -1,0 +1,104 @@
+			The JCAEHV Report 
+
++ System name: UbiParking
++ State number: 129
++ Initial state number: 1
++ Reachable state number: 46
++ Unreachable state number: 83
++ Exceptional state number: 23
++ Duration Time: 476ms
+
++ Reachable States
+ *CS6{hasSmoke, isHot}->CS6 
+ *CS7{hasSmoke, isHot, inMovement}->CS7 
+ CS9{isSprinklerOn, inMovement}->CS9 
+ CS11{isSprinklerOn, isHot, inMovement}->CS11 
+ CS13{isSprinklerOn, hasSmoke, inMovement}->CS13 
+ CS15{isSprinklerOn, hasSmoke, isHot, inMovement}->CS15 
+ *CS23{hasSpace, hasSmoke, isHot, inMovement}->CS23 
+ *CS22{hasSpace, hasSmoke, isHot}->CS22 
+ CS25{hasSpace, isSprinklerOn, inMovement}->CS25 
+ CS27{hasSpace, isSprinklerOn, isHot, inMovement}->CS27 
+ CS29{hasSpace, isSprinklerOn, hasSmoke, inMovement}->CS29 
+ CS31{hasSpace, isSprinklerOn, hasSmoke, isHot, inMovement}->CS31 
+ *CS35{isHot, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS33{inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS38{hasSmoke, isHot, atParkPlace}->CS38 
+ *CS39{hasSmoke, isHot, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS37{hasSmoke, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS43{isSprinklerOn, isHot, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS41{isSprinklerOn, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS47{isSprinklerOn, hasSmoke, isHot, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS45{isSprinklerOn, hasSmoke, inMovement, atParkPlace}->CS97 CS99 CS101 CS103 CS105 CS107 CS109 CS111 CS113 CS115 CS117 CS119 CS121 CS123 CS125 CS127 
+ *CS55{hasSpace, hasSmoke, isHot, inMovement, atParkPlace}->CS105 CS107 CS109 CS111 CS121 CS123 CS125 CS127 
+ *CS54{hasSpace, hasSmoke, isHot, atParkPlace}->CS54 
+ *CS70{hasSmoke, isHot, atParkEntrance}->CS70 
+ *CS71{hasSmoke, isHot, inMovement, atParkEntrance}->CS71 
+ *CS87{hasSpace, hasSmoke, isHot, inMovement, atParkEntrance}->CS87 
+ *CS86{hasSpace, hasSmoke, isHot, atParkEntrance}->CS86 
+ *CS102{atParkExit, hasSmoke, isHot}->CS102 
+ *CS103{atParkExit, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS101{atParkExit, hasSmoke, inMovement}->CS101 
+ CS99{atParkExit, isHot, inMovement}->CS99 
+ CS97{atParkExit, inMovement}->CS97 
+ CS111{atParkExit, isSprinklerOn, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS109{atParkExit, isSprinklerOn, hasSmoke, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS107{atParkExit, isSprinklerOn, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS105{atParkExit, isSprinklerOn, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ *CS119{hasSpace, atParkExit, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ *CS118{hasSpace, atParkExit, hasSmoke, isHot}->CS118 
+ CS117{hasSpace, atParkExit, hasSmoke, inMovement}->CS117 
+ CS115{hasSpace, atParkExit, isHot, inMovement}->CS115 
+ CS113{hasSpace, atParkExit, inMovement}->CS113 
+ CS127{hasSpace, atParkExit, isSprinklerOn, hasSmoke, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS125{hasSpace, atParkExit, isSprinklerOn, hasSmoke, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS123{hasSpace, atParkExit, isSprinklerOn, isHot, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ CS121{hasSpace, atParkExit, isSprinklerOn, inMovement}->CS9 CS11 CS13 CS15 CS25 CS27 CS29 CS31 
+ >CS128{}->CS6 CS7 CS22 CS23 CS33 CS35 CS37 CS38 CS39 CS41 CS43 CS45 CS47 CS54 CS55 CS70 CS71 CS86 CS87 CS102 CS103 CS118 CS119 
+
+ Properties Verification 
+
+[Accepted][fireException](Detection Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)))
+[Accepted][fireException](Catch Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & ((inMovement & atParkPlace) | (inMovement & atParkExit)))
+[Accepted][fireException](Handler Liveness)
+	Property Formula: EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace)) & EX(((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit))
+[Accepted][fireException](Handling Stability)
+	Property Formula: AX(!((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace)) & EF((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))) &((isHot & hasSmoke) & ( ! isSprinklerOn))))) & AX(!((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit)) & EF((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit)))) &((isHot & hasSmoke) & ( ! isSprinklerOn)))))
+[Accepted][fireException](Reachability)
+	Property Formula: AX((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkPlace)) -> EX((isSprinklerOn & (inMovement & atParkExit)) & EX((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit))))))) & AX((((isHot & hasSmoke) & ( ! isSprinklerOn)) & (inMovement & atParkExit)) -> EX((isSprinklerOn & (inMovement & ((( ! atParkEntrance) & ( ! atParkPlace)) & ( ! atParkExit))))))
+[Accepted][noSpaceException](Detection Liveness)
+	Property Formula: EX(((inMovement & atParkPlace) & ( ! hasSpace)))
+[Accepted][noSpaceException](Catch Liveness)
+	Property Formula: EX(((inMovement & atParkPlace) & ( ! hasSpace)) & ((inMovement & atParkPlace)))
+[Accepted][noSpaceException](Handler Liveness)
+	Property Formula: EX(((inMovement & atParkPlace) & ( ! hasSpace)) & (inMovement & atParkPlace))
+[Accepted][noSpaceException](Handling Stability)
+	Property Formula: AX(!((((inMovement & atParkPlace) & ( ! hasSpace)) & (inMovement & atParkPlace)) & EF((inMovement & atParkExit) &((inMovement & atParkPlace) & ( ! hasSpace)))))
+[Accepted][noSpaceException](Reachability)
+	Property Formula: AX((((inMovement & atParkPlace) & ( ! hasSpace)) & (inMovement & atParkPlace)) -> EX((inMovement & atParkExit)))
+[Accepted][null]()
+	Property Formula: EG(( atParkEntrance) -> ((atParkEntrance AU atParkExit)))
+[Rejected][null]( : )
+	Property Formula: (atParkExit EU atParkEntrance)
+[Rejected][null]( : )
+	Property Formula: (atParkExit AU atParkEntrance)
+[Accepted][null]()
+	Property Formula: EX(atParkEntrance)
+[Accepted][null]()
+	Property Formula: EF(atParkEntrance)
+[Rejected][null]( : )
+	Property Formula: EG(atParkEntrance)
+[Rejected][null]( : )
+	Property Formula: AF(atParkExit)
+[Rejected][null]( : )
+	Property Formula: AF(atParkExit)
+[Accepted][null]()
+	Property Formula: AF(((!( atParkEntrance )) & (!( atParkPlace ))) & (!( atParkExit )))
+[Accepted][null]()
+	Property Formula: EX(((isHot) & (hasSmoke)) & (!( isSprinklerOn )))
+[Accepted][null]()
+	Property Formula: EX((((isHot) & (hasSmoke)) & (!( isSprinklerOn ))) & (((inMovement) & (atParkExit)) | ((inMovement) & (atParkPlace))))
+[Accepted][null]()
+	Property Formula: AX(( (((inMovement) & (atParkPlace)) & (!( hasSpace ))) & ((inMovement) & (atParkPlace))) -> (EX((inMovement) & (atParkExit))))

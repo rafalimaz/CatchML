@@ -1,0 +1,62 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initialstate="CS8">
+<state id="CS1" >
+	<onentry>
+		<log expr="{p1}"/>
+	</onentry>
+	<transition target="CS1"></transition>
+</state>
+<state id="CS2" >
+	<onentry>
+		<log expr="{p2}"/>
+	</onentry>
+	<transition target="CS2"></transition>
+</state>
+<state id="CS3" >
+	<onentry>
+		<log expr="{p2, p1}"/>
+	</onentry>
+	<transition target="CS3"></transition>
+</state>
+<state id="*CS4" >
+	<onentry>
+		<log expr="{p3}"/>
+	</onentry>
+	<transition target="*CS4"></transition>
+</state>
+<state id="*CS5" >
+	<onentry>
+		<log expr="{p3, p1}"/>
+	</onentry>
+	<transition target="CS2"></transition>
+	<transition target="CS3"></transition>
+	<transition target="*CS6"></transition>
+	<transition target="*CS7"></transition>
+</state>
+<state id="*CS6" >
+	<onentry>
+		<log expr="{p3, p2}"/>
+	</onentry>
+	<transition target="CS1"></transition>
+	<transition target="CS3"></transition>
+	<transition target="*CS5"></transition>
+	<transition target="*CS7"></transition>
+</state>
+<state id="*CS7" >
+	<onentry>
+		<log expr="{p3, p2, p1}"/>
+	</onentry>
+	<transition target="CS1"></transition>
+	<transition target="CS3"></transition>
+	<transition target="*CS5"></transition>
+	<transition target="*CS7"></transition>
+</state>
+<state id="CS8" initial="true">
+	<onentry>
+		<log expr="{}"/>
+	</onentry>
+	<transition target="*CS4"></transition>
+	<transition target="*CS5"></transition>
+	<transition target="*CS6"></transition>
+	<transition target="*CS7"></transition>
+</state>
+</scxml>

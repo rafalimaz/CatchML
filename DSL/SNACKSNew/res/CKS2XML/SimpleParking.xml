@@ -1,0 +1,126 @@
+<cks system="SimpleParking" stateNumber="12" reachableStateNumber="8" unreachableStateNumber="4" exceptionalStateNumber="0" transitionNumber="14">
+	<state id="CS11" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS9" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS5" />
+			<post-state id="CS7" />
+		</post-states>
+	</state>
+	<state id="CS9" initial="true" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS3" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS11" />
+		</post-states>
+	</state>
+	<state id="CS1" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS0" />
+			<pre-state id="CS7" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS5" />
+		</post-states>
+	</state>
+	<state id="CS5" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS11" />
+			<pre-state id="CS1" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS3" />
+		</post-states>
+	</state>
+	<state id="CS0" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="inMovement" value="false" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS6" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS1" />
+		</post-states>
+	</state>
+	<state id="CS3" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="false" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="atShopping" value="false" />
+		</label>
+		<pre-states>
+			<pre-state id="CS5" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS9" />
+		</post-states>
+	</state>
+	<state id="CS7" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="inMovement" value="true" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS11" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS1" />
+			<post-state id="CS6" />
+		</post-states>
+	</state>
+	<state id="CS6" initial="false" reachable="true" exceptional="false">
+		<label>
+			<proposition name="parkGoal" value="true" />
+			<proposition name="inMovement" value="false" />
+			<proposition name="exitGoal" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="atShopping" value="true" />
+		</label>
+		<pre-states>
+			<pre-state id="CS7" />
+		</pre-states>
+		<post-states>
+			<post-state id="CS0" />
+		</post-states>
+	</state>
+</cks>

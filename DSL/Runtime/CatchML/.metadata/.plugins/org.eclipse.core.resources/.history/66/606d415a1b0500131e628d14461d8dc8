@@ -1,0 +1,36 @@
+system HealthCare {
+	prop BPMLT40, SystolicBloodPressGT80, DiastolicBloodPressLT100, hasHeartAttack, wasHelped,
+	notifyNearDevices;
+	prop regionHandledSuccessfully, neighborhoodCalled, askUrgentHelpToEmergency, emergencyGroupCalled;
+	prop doctorCalled, doctorIsActive, askUrgentHelpToDoctor, callReserveDoctor;
+
+	situation hasHeartAttack := (BPMLT40 || SystolicBloodPressGT80 || DiastolicBloodPressLT100);
+	exception heartAttack := hasHeartAttack;
+
+	scope nearDevices handle (heartAttack) {
+		case (regionNotNotified) {
+			do notifyNearDevices;
+		}
+	}
+
+	scope neighborhood handle (heartAttack) {
+		case (!regionHandledSuccessfully && !neighborhoodCalled) {
+			do notifyNearDevices;
+		} 
+	}
+
+	scope emergencySupport handle (heartAttack) {
+		case (!emergencyGroupCalled) {
+			do askUrgentHelpToEmergency && emergencyGroupCalled;
+		} 
+	}
+
+	scope device handle (heartAttack) {
+		case (!doctorCalled && doctorIsActive) {
+			do askUrgentHelpToDoctor && doctorCalled;
+		}
+		case (!doctorIsActive) {
+			do callReserveDoctor;
+		}
+	}
+}

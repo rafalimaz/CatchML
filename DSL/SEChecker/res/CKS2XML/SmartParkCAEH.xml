@@ -1,0 +1,2474 @@
+<cks system="SmartParkCAEH">
+	<constraints>
+		<state-constraint exp="(( not (hasSmoke and isHot)) or isSpkOn) " />
+		<state-constraint exp="((((isReady and ( not isRunning)) and ( not isStopped)) or ((( not isReady) and isRunning) and ( not isStopped)))  or ((( not isReady) and ( not isRunning)) and isStopped)) " />
+	</constraints>
+	<state id="CS0" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS1" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS2" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS3" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS59" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS18" />
+		</post-states>
+	</state>
+	<state id="CS4" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS4" />
+			<pre-state name="CS36" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS4" />
+		</post-states>
+	</state>
+	<state id="CS5" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS6" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS7" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS8" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="true" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS41" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS9" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="true" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS30" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS10" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS11" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS12" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS20" />
+		</post-states>
+	</state>
+	<state id="CS13" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS14" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS15" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS41" />
+		</post-states>
+	</state>
+	<state id="CS16" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS19" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS23" />
+		</post-states>
+	</state>
+	<state id="CS17" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS53" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS18" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS3" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS19" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS16" />
+		</post-states>
+	</state>
+	<state id="CS20" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS12" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS28" />
+		</post-states>
+	</state>
+	<state id="CS21" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS22" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS23" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS16" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS25" />
+			<post-state name="CS40" />
+			<post-state name="CS54" />
+			<post-state name="CS44" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS31" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS24" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS61" />
+		</post-states>
+	</state>
+	<state id="CS25" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS26" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS27" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS49" />
+		</post-states>
+	</state>
+	<state id="CS28" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS20" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS29" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS30" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS51" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS9" />
+		</post-states>
+	</state>
+	<state id="CS31" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS32" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS33" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS57" />
+		</post-states>
+	</state>
+	<state id="CS34" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS53" />
+		</post-states>
+	</state>
+	<state id="CS35" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS23" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS35" />
+			<pre-state name="CS17" />
+			<pre-state name="CS28" />
+			<pre-state name="CS18" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS60" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS35" />
+		</post-states>
+	</state>
+	<state id="CS36" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS4" />
+		</post-states>
+	</state>
+	<state id="CS37" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS38" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS39" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS40" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS41" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS15" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS8" />
+		</post-states>
+	</state>
+	<state id="CS42" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS43" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS44" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS45" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS46" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS47" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS48" />
+		</post-states>
+	</state>
+	<state id="CS48" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS47" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS55" />
+		</post-states>
+	</state>
+	<state id="CS49" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS27" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS56" />
+		</post-states>
+	</state>
+	<state id="CS50" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS51" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS30" />
+		</post-states>
+	</state>
+	<state id="CS52" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS32" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS36" />
+			<post-state name="CS37" />
+			<post-state name="CS5" />
+			<post-state name="CS38" />
+			<post-state name="CS39" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS42" />
+			<post-state name="CS43" />
+			<post-state name="CS44" />
+			<post-state name="CS45" />
+			<post-state name="CS11" />
+			<post-state name="CS13" />
+			<post-state name="CS46" />
+			<post-state name="CS14" />
+			<post-state name="CS21" />
+			<post-state name="CS22" />
+			<post-state name="CS24" />
+			<post-state name="CS25" />
+			<post-state name="CS29" />
+			<post-state name="CS54" />
+			<post-state name="CS58" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS53" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS34" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS17" />
+		</post-states>
+	</state>
+	<state id="CS54" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS52" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS29" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS15" />
+			<post-state name="CS47" />
+			<post-state name="CS50" />
+			<post-state name="CS34" />
+			<post-state name="CS51" />
+			<post-state name="CS2" />
+			<post-state name="CS52" />
+			<post-state name="CS6" />
+			<post-state name="CS19" />
+			<post-state name="CS7" />
+			<post-state name="CS26" />
+			<post-state name="CS27" />
+			<post-state name="CS12" />
+			<post-state name="CS59" />
+		</post-states>
+	</state>
+	<state id="CS55" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS48" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS56" initial="false" caught="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="true" />
+			<proposition name="isSpkOn" value="false" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="true" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS49" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS35" />
+			<post-state name="CS5" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS57" />
+			<post-state name="CS60" />
+		</post-states>
+	</state>
+	<state id="CS57" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS23" />
+			<pre-state name="CS8" />
+			<pre-state name="CS33" />
+			<pre-state name="CS9" />
+			<pre-state name="CS17" />
+			<pre-state name="CS28" />
+			<pre-state name="CS18" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS57" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS57" />
+		</post-states>
+	</state>
+	<state id="CS58" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="false" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS50" />
+			<pre-state name="CS2" />
+			<pre-state name="CS52" />
+			<pre-state name="CS6" />
+			<pre-state name="CS7" />
+			<pre-state name="CS26" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS14" />
+			<post-state name="CS0" />
+			<post-state name="CS33" />
+			<post-state name="CS1" />
+			<post-state name="CS5" />
+			<post-state name="CS10" />
+			<post-state name="CS40" />
+			<post-state name="CS25" />
+			<post-state name="CS44" />
+			<post-state name="CS54" />
+			<post-state name="CS11" />
+			<post-state name="CS45" />
+			<post-state name="CS60" />
+			<post-state name="CS31" />
+		</post-states>
+	</state>
+	<state id="CS59" initial="false">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="true" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="false" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS14" />
+			<pre-state name="CS0" />
+			<pre-state name="CS1" />
+			<pre-state name="CS5" />
+			<pre-state name="CS10" />
+			<pre-state name="CS40" />
+			<pre-state name="CS25" />
+			<pre-state name="CS44" />
+			<pre-state name="CS54" />
+			<pre-state name="CS11" />
+			<pre-state name="CS45" />
+			<pre-state name="CS31" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS3" />
+		</post-states>
+	</state>
+	<state id="CS60" initial="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="true" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="false" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="isRaisedFire" value="false" />
+			<proposition name="atPark" value="false" />
+			<proposition name="isStopped" value="false" />
+		</label>
+		<pre-states>
+			<pre-state name="CS32" />
+			<pre-state name="CS2" />
+			<pre-state name="CS37" />
+			<pre-state name="CS6" />
+			<pre-state name="CS38" />
+			<pre-state name="CS39" />
+			<pre-state name="CS7" />
+			<pre-state name="CS8" />
+			<pre-state name="CS9" />
+			<pre-state name="CS42" />
+			<pre-state name="CS43" />
+			<pre-state name="CS13" />
+			<pre-state name="CS46" />
+			<pre-state name="CS50" />
+			<pre-state name="CS17" />
+			<pre-state name="CS52" />
+			<pre-state name="CS18" />
+			<pre-state name="CS21" />
+			<pre-state name="CS22" />
+			<pre-state name="CS23" />
+			<pre-state name="CS26" />
+			<pre-state name="CS28" />
+			<pre-state name="CS29" />
+			<pre-state name="CS55" />
+			<pre-state name="CS56" />
+			<pre-state name="CS58" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS35" />
+		</post-states>
+	</state>
+	<state id="CS61" initial="false" raised="true">
+		<label>
+			<proposition name="isCaughtFire" value="false" />
+			<proposition name="isReady" value="false" />
+			<proposition name="isRaisedNoFreeSpace" value="false" />
+			<proposition name="isSpkOn" value="true" />
+			<proposition name="hasSpace" value="true" />
+			<proposition name="isRunning" value="false" />
+			<proposition name="isCaughtNoFreeSpace" value="false" />
+			<proposition name="hasSmoke" value="true" />
+			<proposition name="isHot" value="true" />
+			<proposition name="atPark" value="true" />
+			<proposition name="isRaisedFire" value="true" />
+			<proposition name="isStopped" value="true" />
+		</label>
+		<pre-states>
+			<pre-state name="CS24" />
+			<pre-state name="CS61" />
+		</pre-states>
+		<post-states>
+			<post-state name="CS61" />
+		</post-states>
+	</state>
+</cks>

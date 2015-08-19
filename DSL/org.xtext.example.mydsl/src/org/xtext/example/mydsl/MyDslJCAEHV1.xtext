@@ -1,0 +1,185 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Domainmodel:
+  (elements += AbstractElement)*
+;
+
+PackageDeclaration:
+  'package' name = ID '{'
+    (elements += AbstractElement)*
+  '}'
+;
+
+AbstractElement:
+  PackageDeclaration | Model | Import  
+;
+
+QualifiedName:
+  ID (=> '.' ID)*
+;
+
+Import:
+  'import' importedNamespace = QualifiedNameWithWildcard
+;
+
+QualifiedNameWithWildcard:
+  QualifiedName '.*'?
+;
+
+// BEGIN - MODEL
+Model:
+	'system' name = ID '{'		
+		contextModel = ContextModel
+		handlingModel = HandlingModel
+		specificationModel = SpecificationModel
+	'}'
+;
+
+ContextModel:
+	{ContextModel}(label = 'context model' '{'
+		propositionsList = PropositionsList
+		expressionsList = ExpressionsList
+		semanticConstraintsList = SemanticConstraintsList
+		transitionConstraintsList = TransitionConstraintsList
+	'}')?
+;
+
+HandlingModel:
+	{HandlingModel} (label = 'handling model' '{'
+		exceptionsList = ExceptionsList
+		(scopes += Scope)*
+	'}')?
+;
+
+SpecificationModel:
+	{SpecificationModel} (label = 'specification model' '{'
+		properties += PropertyDeclaration
+	'}')?
+;
+
+// END - MODEL
+
+PropositionsList:
+	{PropositionsList}(label = 'propositions' '{'
+		(propositions += PropositionDeclaration)+
+	'}')?
+;
+
+PropositionDeclaration:
+	name = ID
+;
+
+ExpressionsList: 
+	{ExpressionsList}(label = 'expressions' '{'
+		(expressions += ExpressionDeclaration)+
+	'}')?
+;
+
+ExpressionDeclaration:
+	name = ID ':' expression = LogicExpression
+;
+
+SemanticConstraintsList:
+	{SemanticConstraintsList}(label = 'semantic constraints' '{' 	
+		(constraints += SemanticConstraintDeclaration)+
+	'}')?
+;
+
+TransitionConstraintsList:
+	{TransitionConstraintsList}(label = 'transition constraints' '{' 	
+		(constraints += TransitionConstraintDeclaration)+
+	'}')?
+;
+
+SemanticConstraintDeclaration:
+	name = ID ':' expression = LogicExpression
+;
+
+TransitionConstraintDeclaration:
+	name = ID ':' left = LogicExpression '<x>' right = LogicExpression 
+;
+
+ExceptionsList: 
+	{ExceptionsList}(label = 'exceptions' '{' 	
+		(exceptions += ExceptionDeclaration)+
+	'}')?
+;
+
+ExceptionDeclaration:
+	name = ID ':' expression = LogicExpression
+;
+
+AbstractExpression:
+	PropositionDeclaration | ExpressionDeclaration
+;
+
+// BEGIN - HANDLERS
+
+Scope:
+	'scope' name = ID 'catches' exception = [ExceptionDeclaration] '{'
+		(context = ContextExpression)?
+		(handlers += Handler)+
+	'}'
+;
+
+ContextExpression:
+	label = 'context '	expression = [AbstractExpression]
+;
+
+Handler:
+	'handler' name = ID '{'
+		conditionExpression = ConditionExpression
+		actionsExpression = ActionsExpression
+		('signal' scope=[Scope])?
+	'}' 
+;
+
+ConditionExpression:
+	'when' '(' expression = LogicExpression')'
+;
+
+ActionsExpression:
+	'do' '{' 
+		(actions+=LogicExpression)+
+	'}' 
+;
+
+//END - HANDLERS
+
+PropertyDeclaration:
+	name = ID ':' expression = LogicExpression
+;
+
+LogicExpression:
+	(atom=[AbstractExpression]
+	| opUn=UNARYOPERATOR '(' unary=LogicExpression ')' 
+	| opBin=BINARYOPERATOR '(' left=LogicExpression ','  right=LogicExpression ')'	)
+	| opMul=MULTIPLEOPERATOR '(' multiple=MultipleExpression ')'
+;
+
+MultipleExpression returns LogicExpression:
+   TerminalExpression ({Operation.left=current} 
+    op=',' right=MultipleExpression)?
+;
+ 
+TerminalExpression returns MultipleExpression:
+  	value=LogicExpression
+;
+
+TestDeclaration:
+	name = ID
+;
+
+enum BINARYOPERATOR:
+	nand | nor | ifthen | iff
+;
+
+enum UNARYOPERATOR:
+	not
+;
+
+enum MULTIPLEOPERATOR:
+	and | or | xor 
+;

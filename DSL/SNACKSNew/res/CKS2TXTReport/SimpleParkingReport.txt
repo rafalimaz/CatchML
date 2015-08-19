@@ -1,0 +1,25 @@
+			The SNACKS Report
+
++ System name: SimpleParking
++ State number: 12
++ Initial state number: 1
++ Reachable state number: 8
++ Unreachable state number: 4
++ Exceptional state number: 0
++ Transition number: 14
+
++ Reachable States
+ CS11{parkGoal, inMovement, atShopping}->CS5 CS7 
+ >CS9{parkGoal, inMovement}->CS11 
+ CS1{inMovement, exitGoal, atPark, atShopping}->CS5 
+ CS5{inMovement, exitGoal, atShopping}->CS3 
+ CS0{exitGoal, atPark, atShopping}->CS1 
+ CS3{inMovement, exitGoal}->CS9 
+ CS7{parkGoal, inMovement, atPark, atShopping}->CS1 CS6 
+ CS6{parkGoal, atPark, atShopping}->CS0 
+
++ Unreachable States
+ CS8{parkGoal}->CS8 
+ CS4{exitGoal, atShopping}->CS4 
+ CS2{exitGoal}->CS2 
+ CS10{parkGoal, atShopping}->CS10 

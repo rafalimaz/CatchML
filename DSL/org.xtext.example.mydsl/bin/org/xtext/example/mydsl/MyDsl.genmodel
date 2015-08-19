@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.mydsl/src-gen" editDirectory="/org.xtext.example.mydsl.edit/src"
+    editorDirectory="/org.xtext.example.mydsl.editor/src" modelPluginID="org.xtext.example.mydsl"
+    forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.mydsl.edit"
+    editorPluginID="org.xtext.example.mydsl.editor" runtimeVersion="2.8">
+  <genPackages prefix="MyDsl" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
+      ecorePackage="MyDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//MULTIPLEOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//MULTIPLEOPERATOR/xor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//BINARYOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BINARYOPERATOR/nor"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BINARYOPERATOR/nand"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//TEMPORALOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/EX"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/EG"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/EF"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/AX"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/AG"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPORALOPERATOR/AF"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//TEMPUNTILOPERATOR">
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPUNTILOPERATOR/E"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//TEMPUNTILOPERATOR/A"/>
+    </genEnums>
+    <genClasses ecoreClass="MyDsl.ecore#//Domainmodel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Domainmodel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//AbstractElement"/>
+    <genClasses ecoreClass="MyDsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Import/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//SystemDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//SystemDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SystemDeclaration/declarations"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Declaration"/>
+    <genClasses ecoreClass="MyDsl.ecore#//PropositionType"/>
+    <genClasses ecoreClass="MyDsl.ecore#//PropositionList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropositionList/head"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropositionList/tail"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//PropositionSingle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropositionSingle/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//PropositionDeclaration"/>
+    <genClasses ecoreClass="MyDsl.ecore#//SituationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SituationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//SituationDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SituationDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//SemanticConstraintType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SemanticConstraintType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//SemanticConstraintDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//SemanticConstraintDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SemanticConstraintDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//TransitionConstraintType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//TransitionConstraintType/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//TransitionConstraintType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//TransitionConstraintDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//TransitionConstraintDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//TransitionConstraintDeclaration/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//TransitionConstraintDeclaration/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ExceptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ExceptionType/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ExceptionType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ExceptionDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ExceptionDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ExceptionDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//AbstractDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//AbstractDeclaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ScopeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ScopeType/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ScopeType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ScopeDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ScopeDeclaration/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ScopeDeclaration/exception"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ScopeDeclaration/handlers"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//HandlerDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//HandlerDeclaration/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//HandlerDeclaration/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//HandlerDeclaration/propagation"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ActionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ActionDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//PropagationDeclaration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropagationDeclaration/exception"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//SignalDeclaration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyDsl.ecore#//SignalDeclaration/scope"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//RaiseDeclaration"/>
+    <genClasses ecoreClass="MyDsl.ecore#//PropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//PropertyType/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropertyType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//PropertyDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//PropertyDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//PropertyDeclaration/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//LogicExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/expr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//LogicExpression/opBin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/right"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//LogicExpression/opMul"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/args"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//LogicExpression/opTemp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/temporal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//LogicExpression/opTempUntil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/leftExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//LogicExpression/rightExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//LogicExpression/op"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//OrOpExpression"/>
+    <genClasses ecoreClass="MyDsl.ecore#//AndOpExpression"/>
+    <genClasses ecoreClass="MyDsl.ecore#//RelationalOpExpression"/>
+    <genClasses ecoreClass="MyDsl.ecore#//UnaryOpExpression"/>
+  </genPackages>
+</genmodel:GenModel>

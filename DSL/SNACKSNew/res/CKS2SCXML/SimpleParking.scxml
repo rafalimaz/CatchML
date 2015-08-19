@@ -1,0 +1,28 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initialstate="CS9">
+	<state id="CS11" initial="false">
+		<transition target="CS5" />
+		<transition target="CS7" />
+	</state>
+	<state id="CS9" initial="true">
+		<transition target="CS11" />
+	</state>
+	<state id="CS1" initial="false">
+		<transition target="CS5" />
+	</state>
+	<state id="CS5" initial="false">
+		<transition target="CS3" />
+	</state>
+	<state id="CS0" initial="false">
+		<transition target="CS1" />
+	</state>
+	<state id="CS3" initial="false">
+		<transition target="CS9" />
+	</state>
+	<state id="CS7" initial="false">
+		<transition target="CS1" />
+		<transition target="CS6" />
+	</state>
+	<state id="CS6" initial="false">
+		<transition target="CS0" />
+	</state>
+</scxml>

@@ -1,0 +1,50 @@
+PhoneAdapter - Sun Aug 18 19:16:00 GFT 2013			The JCAEHV Report 
+
++ System name: PhoneAdapter
++ State number: 25
++ Initial state number: 1
++ Reachable state number: 25
++ Unreachable state number: 0
++ Exceptional state number: 12
++ Duration Time: 385ms
+
++ Reachable States
+ CS0{}->CS0 
+ CS1{isRingOn}->CS1 
+ *CS2{receivedCall}->CS5 CS7 CS13 CS15 CS21 CS23 
+ *CS3{receivedCall, isRingOn}->CS5 CS7 CS13 CS15 CS21 CS23 
+ CS4{isVibrateOn}->CS4 
+ CS5{isVibrateOn, isRingOn}->CS0 CS1 CS4 CS5 CS8 CS9 CS12 CS13 CS16 CS17 CS20 CS21 
+ *CS6{isVibrateOn, receivedCall}->CS5 CS7 CS13 CS15 CS21 CS23 
+ *CS7{isVibrateOn, receivedCall, isRingOn}->CS0 CS1 CS4 CS5 CS7 CS8 CS9 CS12 CS13 CS15 CS16 CS17 CS20 CS21 CS23 
+ CS8{atHome}->CS8 
+ CS9{isRingOn, atHome}->CS9 
+ *CS10{receivedCall, atHome}->CS17 CS19 
+ *CS11{receivedCall, isRingOn, atHome}->CS17 CS19 
+ CS12{isVibrateOn, atHome}->CS16 CS17 CS20 CS21 
+ CS13{isVibrateOn, isRingOn, atHome}->CS16 CS17 CS20 CS21 
+ *CS14{isVibrateOn, receivedCall, atHome}->CS16 CS17 CS19 CS20 CS21 
+ *CS15{isVibrateOn, receivedCall, isRingOn, atHome}->CS16 CS17 CS19 CS20 CS21 
+ CS17{atOffice, isRingOn}->CS8 CS9 CS12 CS13 
+ CS16{atOffice}->CS16 
+ *CS19{atOffice, receivedCall, isRingOn}->CS8 CS9 CS12 CS13 CS14 
+ *CS18{atOffice, receivedCall}->CS12 CS14 
+ CS21{isVibrateOn, atOffice, isRingOn}->CS8 CS9 CS12 CS13 
+ CS20{isVibrateOn, atOffice}->CS20 
+ *CS23{isVibrateOn, atOffice, receivedCall, isRingOn}->CS8 CS9 CS12 CS13 CS14 
+ *CS22{isVibrateOn, atOffice, receivedCall}->CS12 CS14 
+ >CS24{}->CS2 CS3 CS6 CS7 CS10 CS11 CS14 CS15 CS18 CS19 CS22 CS23 
+
+ Properties Verification 
+
+[Accepted][callException](Detection Liveness)
+	Property Formula: EX(receivedCall)
+[Accepted][callException](Catch Liveness)
+	Property Formula: EX(receivedCall & ((( ! atHome) & ( ! atOffice)) | atHome | atOffice))
+[Accepted][callException](Handler Liveness)
+	Property Formula: EX(receivedCall & (( ! atHome) & ( ! atOffice))) & EX(receivedCall & atHome) & EX(receivedCall & atOffice)
+[Accepted][callException](Handling Stability)
+	Property Formula: AX(!((receivedCall & (( ! atHome) & ( ! atOffice))) & EF(( ! receivedCall) &receivedCall))) & AX(!((receivedCall & atHome) & EF(( ! receivedCall) &receivedCall))) & AX(!((receivedCall & atOffice) & EF(( ! receivedCall) &receivedCall)))
+[Accepted][callException](Reachability)
+	Property Formula: AX((receivedCall & (( ! atHome) & ( ! atOffice))) -> EX((isRingOn & isVibrateOn) & EX(( ! receivedCall)))) & AX((receivedCall & atHome) -> EX((isRingOn & ( ! isVibrateOn)) & EX(( ! receivedCall)))) & AX((receivedCall & atOffice) -> EX((( ! isRingOn) & isVibrateOn) & EX(( ! receivedCall))))
+PhoneAdapter - Sun Aug 18 19:30:14 GFT 2013

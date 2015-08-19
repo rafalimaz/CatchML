@@ -1,0 +1,32 @@
+use test.*;
+system UbiParking {	
+	prop  atParkPlace, inMovement, atParkEntrance, atParkExit, hasSmoke, hasSpace, isSprinklerOn, isHot;
+		
+	situation outOfPark := and (not(atParkEntrance), not(atParkPlace), not(atParkExit)); 
+	
+	sconstraint allPlacesDisjoined := or(xor(atParkEntrance, atParkPlace, atParkExit), outOfPark);
+	
+	tconstraint t1 := pre outOfPark post and(not(atParkPlace), not(atParkExit));
+	tconstraint t2 := pre atParkEntrance post not(atParkExit);
+	tconstraint t3 := pre atParkPlace post and(not(atParkEntrance), not(outOfPark));
+		
+	exception fireException := and (isHot, hasSmoke, not (isSprinklerOn));	
+	scope fireScope handle (fireException){
+		case(and(inMovement, atParkPlace)) catch {
+			do and(isSprinklerOn, and(inMovement, atParkExit));
+			do and(isSprinklerOn, and(inMovement, outOfPark));
+		}
+		case(and(inMovement, atParkExit)) catch {
+			do and(isSprinklerOn, and(inMovement, outOfPark));			
+		}
+	}
+	
+	exception noSpaceException := and(inMovement, atParkPlace, not(hasSpace));	
+	scope noSpaceScope handle (noSpaceException){
+		case(and(inMovement, atParkPlace)) catch {
+			do and(inMovement, atParkExit);			
+		}
+	}
+	
+	spec s1 := "EX((((var1 & var2) & (!var3)) & var4))";
+}

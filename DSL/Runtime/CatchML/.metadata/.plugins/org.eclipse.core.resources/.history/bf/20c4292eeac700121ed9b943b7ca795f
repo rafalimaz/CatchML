@@ -1,0 +1,34 @@
+			The JCAEHV Report 
+
++ System name: test
++ State number: 9
++ Initial state number: 1
++ Reachable state number: 8
++ Unreachable state number: 1
++ Exceptional state number: 4
++ Duration Time: 12ms
+
++ Reachable States
+ CS1{p1}->CS1 
+ CS2{p2}->CS2 
+ CS3{p2, p1}->CS3 
+ *CS4{p3}->CS4 
+ *CS5{p3, p1}->CS2 CS3 CS6 CS7 
+ *CS6{p3, p2}->CS1 CS3 CS5 CS7 
+ *CS7{p3, p2, p1}->CS1 CS3 CS5 CS7 
+ >CS8{}->CS4 CS5 CS6 CS7 
+
+ Properties Verification 
+
+[Accepted][e1](Detection Liveness)
+	Property Formula: EX(p3)
+[Accepted][e1](Catch Liveness)
+	Property Formula: EX(p3 & (p2 | p1))
+[Accepted][e1](Handler Liveness)
+	Property Formula: EX(p3 & p2) & EX(p3 & p1)
+[Rejected][e1](Handling Stability : Cyclic Handling Fault)
+	Property Formula: AX(!((p3 & p2) & EF(p1 &p3))) & AX(!((p3 & p1) & EF(p2 &p3)))
+[Accepted][e1](Reachability)
+	Property Formula: AX((p3 & p2) -> EX(p1)) & AX((p3 & p1) -> EX(p2))
+[Accepted][f1]
+	Property Formula: EF(( p2) -> (p3))
