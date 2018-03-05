@@ -1,0 +1,24 @@
+system hellowWorld {
+	prop hello, world;
+	
+	exception noWorldException := !world;
+	exception noHelloException := !hello;
+	
+	scope noHelloScope handle (noHelloException) {
+		case (world) {
+			do hello;
+		}
+		case (!world) {
+			do hello && world;
+		}
+	}
+	
+	scope noWorldScope handle (noWorldException) {
+		case (hello) {
+			do world;
+		}
+		case (!hello) {
+			do hello && world;
+		}
+	}	
+}
